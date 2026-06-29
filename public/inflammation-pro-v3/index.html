@@ -4,748 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inflammation Pro - Natural Joint Relief | Goodness Lover</title>
-    <meta name="description" content="Discover the bioavailable turmeric formula that helps relieve joint pain and inflammation naturally. 365-day money back guarantee.">
+    <meta name="description" content="Discover the bioavailable turmeric formula that targets 4 inflammation pathways for lasting joint relief. 365-day money back guarantee.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #fff;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', Georgia, serif;
-            line-height: 1.2;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#1a1a1a;background:#fff;-webkit-font-smoothing:antialiased}
+        h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
+        img{max-width:100%;height:auto;display:block}
 
         /* Countdown Banner */
-        .countdown-banner {
-            background: linear-gradient(135deg, #0d9488 0%, #0a7a70 100%);
-            color: #fff;
-            text-align: center;
-            padding: 12px 16px;
-            font-size: 14px;
-            font-weight: 600;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            letter-spacing: 0.5px;
-        }
-
-        .countdown-banner .badge {
-            background: #fff;
-            color: #0d9488;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 700;
-            margin-right: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .countdown-timer {
-            display: inline-flex;
-            gap: 4px;
-            margin-left: 8px;
-        }
-
-        .countdown-timer span {
-            background: rgba(255,255,255,0.2);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-variant-numeric: tabular-nums;
-        }
+        .countdown-banner{background:linear-gradient(135deg,#0d9488 0%,#0a7a70 100%);color:#fff;text-align:center;padding:12px 16px;font-size:14px;font-weight:600;position:sticky;top:0;z-index:1000;letter-spacing:.5px}
+        .countdown-banner .badge{background:#fff;color:#0d9488;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;margin-right:8px;text-transform:uppercase;letter-spacing:1px}
+        .countdown-timer{display:inline-flex;gap:4px;margin-left:8px}
+        .countdown-timer span{background:rgba(255,255,255,.2);padding:2px 6px;border-radius:4px;font-variant-numeric:tabular-nums}
 
         /* Hero Section */
-        .hero {
-            padding: 40px 16px;
-            text-align: center;
-            background: linear-gradient(180deg, #f0fdfa 0%, #fff 100%);
-        }
-
-        .hero h1 {
-            font-size: 28px;
-            color: #1a1a1a;
-            margin-bottom: 16px;
-            padding: 0 8px;
-        }
-
-        .hero h1 .caps {
-            text-transform: uppercase;
-            color: #0d9488;
-            font-weight: 700;
-        }
-
-        .hero .sub-headline {
-            font-size: 16px;
-            color: #555;
-            max-width: 500px;
-            margin: 0 auto 24px;
-            line-height: 1.6;
-        }
-
-        .hero-product-img {
-            max-width: 280px;
-            margin: 0 auto 24px;
-        }
-
-        .hero-product-img img {
-            width: 100%;
-            border-radius: 12px;
-        }
+        .hero{padding:40px 16px;text-align:center;background:linear-gradient(180deg,#f0fdfa 0%,#fff 100%)}
+        .hero h1{font-size:28px;color:#1a1a1a;margin-bottom:16px;padding:0 8px}
+        .hero h1 .caps{text-transform:uppercase;color:#0d9488;font-weight:700}
+        .hero .sub-headline{font-size:16px;color:#555;max-width:500px;margin:0 auto 24px;line-height:1.6}
+        .hero-product-img{max-width:280px;margin:0 auto 24px}
+        .hero-product-img img{width:100%;border-radius:12px}
 
         /* CTA Button */
-        .cta-btn {
-            display: inline-block;
-            background: #0d9488;
-            color: #fff;
-            padding: 16px 32px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: background 0.2s, transform 0.1s;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            max-width: 340px;
-            margin: 0 auto;
-        }
-
-        .cta-btn:hover {
-            background: #0a7a70;
-            transform: translateY(-1px);
-        }
-
-        .cta-btn:active {
-            transform: translateY(0);
-        }
-
-        .cta-btn .icon {
-            margin-right: 8px;
-        }
+        .cta-btn{display:inline-block;background:#0d9488;color:#fff;padding:16px 32px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;transition:background .2s,transform .1s;border:none;cursor:pointer;width:100%;max-width:340px;margin:0 auto}
+        .cta-btn:hover{background:#0a7a70;transform:translateY(-1px)}
+        .cta-btn:active{transform:translateY(0)}
+        .cta-btn .icon{margin-right:8px}
 
         /* Social Proof Bar */
-        .social-proof {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 16px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .social-proof .stars {
-            color: #f59e0b;
-            font-size: 16px;
-        }
-
-        .social-proof strong {
-            color: #1a1a1a;
-        }
+        .social-proof{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px;font-size:14px;color:#555;flex-wrap:wrap}
+        .social-proof .stars{color:#f59e0b;font-size:16px}
+        .social-proof strong{color:#1a1a1a}
 
         /* Trust Badges */
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
-            padding: 16px;
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            color: #374151;
-        }
-
-        .trust-badge .check {
-            color: #22c55e;
-            font-size: 18px;
-        }
+        .trust-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding:16px;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb}
+        .trust-badge{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#374151}
+        .trust-badge .check{color:#22c55e;font-size:18px}
 
         /* Marquee */
-        .marquee-wrapper {
-            background: #1a1a2e;
-            padding: 12px 0;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .marquee-content {
-            display: inline-block;
-            animation: scroll-text 20s linear infinite;
-        }
-
-        .marquee-content span {
-            color: #fff;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            padding: 0 24px;
-        }
-
-        @keyframes scroll-text {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
+        .marquee-wrapper{background:#1a1a2e;padding:12px 0;overflow:hidden;white-space:nowrap}
+        .marquee-content{display:inline-block;animation:scroll-text 20s linear infinite}
+        .marquee-content span{color:#fff;font-size:14px;font-weight:500;letter-spacing:.5px;padding:0 24px}
+        @keyframes scroll-text{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
         /* Section Base */
-        .section {
-            padding: 48px 16px;
-        }
+        .section{padding:48px 16px}
+        .section-dark{background:#1a1a2e;color:#fff}
+        .section-teal{background:#f0fdfa}
+        .section-title{font-size:24px;text-align:center;margin-bottom:24px;color:#1a1a1a}
+        .section-dark .section-title{color:#fff}
 
-        .section-dark {
-            background: #1a1a2e;
-            color: #fff;
-        }
+        /* Pathways Section */
+        .pathways-section{padding:48px 16px;background:#fff}
+        .pathways-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;margin:0 auto 24px}
+        .pathway-box{background:#f0fdfa;border-radius:12px;padding:20px;text-align:center;border:1px solid #d1fae5}
+        .pathway-box .pathway-icon{font-size:32px;margin-bottom:8px}
+        .pathway-box h4{font-size:15px;color:#0d9488;margin-bottom:6px;font-family:'Inter',sans-serif;font-weight:700}
+        .pathway-box p{font-size:13px;color:#555;line-height:1.5}
+        .pathway-tagline{text-align:center;font-size:16px;color:#555;font-weight:500;margin-bottom:16px;font-style:italic}
+        .pathway-cta{text-align:center}
 
-        .section-teal {
-            background: #f0fdfa;
-        }
+        /* Timeline Section */
+        .timeline-section{padding:48px 16px;background:#f0fdfa}
+        .timeline{max-width:500px;margin:0 auto;position:relative;padding-left:40px}
+        .timeline::before{content:'';position:absolute;left:15px;top:8px;bottom:8px;width:2px;background:#0d9488}
+        .timeline-item{position:relative;margin-bottom:32px}
+        .timeline-item:last-child{margin-bottom:0}
+        .timeline-node{position:absolute;left:-40px;top:0;width:32px;height:32px;border-radius:50%;background:#0d9488;display:flex;align-items:center;justify-content:center;font-size:16px;border:3px solid #f0fdfa}
+        .timeline-time{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0d9488;margin-bottom:4px}
+        .timeline-title{font-size:16px;font-weight:600;color:#1a1a1a;margin-bottom:4px;font-family:'Inter',sans-serif}
+        .timeline-desc{font-size:14px;color:#555;line-height:1.6}
 
-        .section-title {
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 24px;
-            color: #1a1a1a;
-        }
+        /* Founder Section */
+        .founder-section{padding:48px 16px;background:#fff}
+        .founder-img-wrapper{position:relative;display:inline-block;margin:0 auto 24px;text-align:center}
+        .founder-img-wrapper img{border-radius:12px;margin:0 auto;max-width:260px}
+        .founder-badge{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);background:#0d9488;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+        .founder-intro{font-size:22px;font-family:'Playfair Display',serif;text-align:center;margin-bottom:20px;color:#1a1a1a}
+        .pain-list{list-style:none;max-width:340px;margin:0 auto 24px}
+        .pain-list li{padding:8px 0;font-size:15px;display:flex;align-items:center;gap:10px;color:#374151}
+        .pain-list li::before{content:"";display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:#f0fdfa;color:#0d9488;border-radius:50%;font-weight:700;font-size:14px;flex-shrink:0}
+        .founder-text{font-size:15px;line-height:1.7;color:#555;max-width:600px;margin:0 auto 16px}
+        .founder-text em{color:#0d9488;font-style:italic}
+        .tried-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:400px;margin:16px auto 0;list-style:none}
+        .tried-list li{font-size:14px;color:#6b7280;padding-left:16px;position:relative}
+        .tried-list li::before{content:"x";position:absolute;left:0;color:#ef4444;font-weight:700}
 
-        .section-dark .section-title {
-            color: #fff;
-        }
-
-        /* Founder Story */
-        .founder-section {
-            padding: 48px 16px;
-            background: #fff;
-        }
-
-        .founder-img-wrapper {
-            position: relative;
-            display: inline-block;
-            margin: 0 auto 24px;
-            text-align: center;
-        }
-
-        .founder-img-wrapper img {
-            border-radius: 12px;
-            margin: 0 auto;
-            max-width: 260px;
-        }
-
-        .founder-badge {
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #0d9488;
-            color: #fff;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-
-        .founder-intro {
-            font-size: 22px;
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .pain-list {
-            list-style: none;
-            max-width: 340px;
-            margin: 0 auto 24px;
-        }
-
-        .pain-list li {
-            padding: 8px 0;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #374151;
-        }
-
-        .pain-list li::before {
-            content: "+";
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            background: #f0fdfa;
-            color: #0d9488;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 14px;
-            flex-shrink: 0;
-        }
-
-        .founder-text {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto 16px;
-        }
-
-        .founder-text em {
-            color: #0d9488;
-            font-style: italic;
-        }
-
-        .tried-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            max-width: 400px;
-            margin: 16px auto 0;
-            list-style: none;
-        }
-
-        .tried-list li {
-            font-size: 14px;
-            color: #6b7280;
-            padding-left: 16px;
-            position: relative;
-        }
-
-        .tried-list li::before {
-            content: "x";
-            position: absolute;
-            left: 0;
-            color: #ef4444;
-            font-weight: 700;
-        }
-
-        /* Education Section */
-        .edu-section {
-            padding: 48px 16px;
-            background: #f0fdfa;
-        }
-
-        .edu-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .edu-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .edu-card h4 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #0d9488;
-        }
-
-        .edu-card p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .ingredient-imgs {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 24px;
-            flex-wrap: wrap;
-        }
-
-        .ingredient-imgs img {
-            border-radius: 12px;
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-        }
+        /* Category Education */
+        .edu-section{padding:48px 16px;background:#fff}
+        .edu-box{max-width:600px;margin:0 auto;background:#f0fdfa;border-radius:12px;padding:24px;border-left:4px solid #0d9488}
+        .edu-box p{font-size:15px;color:#555;line-height:1.7}
+        .edu-box p strong{color:#1a1a1a}
 
         /* Problem/Solution */
-        .problem-section {
-            padding: 48px 16px;
-            background: #fff;
-        }
+        .problem-section{padding:48px 16px;background:#f9fafb}
+        .problem-box{background:#fef2f2;border-left:4px solid #ef4444;padding:20px;border-radius:0 8px 8px 0;margin-bottom:16px;max-width:600px;margin-left:auto;margin-right:auto}
+        .problem-box p{font-size:15px;color:#555;line-height:1.6}
+        .solution-box{background:#f0fdfa;border-left:4px solid #0d9488;padding:20px;border-radius:0 8px 8px 0;max-width:600px;margin:0 auto}
+        .solution-box p{font-size:15px;color:#555;line-height:1.6}
 
-        .problem-box {
-            background: #fef2f2;
-            border-left: 4px solid #ef4444;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 16px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        /* How To Use */
+        .howto-section{padding:48px 16px;background:#fff}
+        .howto-grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:500px;margin:0 auto}
+        .howto-step{display:flex;gap:16px;align-items:flex-start;background:#f0fdfa;border-radius:12px;padding:20px}
+        .howto-number{width:40px;height:40px;border-radius:50%;background:#0d9488;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;flex-shrink:0}
+        .howto-content h4{font-size:15px;color:#1a1a1a;margin-bottom:4px;font-family:'Inter',sans-serif;font-weight:600}
+        .howto-content p{font-size:13px;color:#555;line-height:1.5}
 
-        .problem-box p {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .solution-box {
-            background: #f0fdfa;
-            border-left: 4px solid #0d9488;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .solution-box p {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.6;
-        }
+        /* Personas */
+        .personas-section{padding:48px 16px;background:#f0fdfa}
+        .personas-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;margin:0 auto}
+        .persona-card{background:#fff;border-radius:12px;padding:20px;text-align:center;border:1px solid #e5e7eb}
+        .persona-card .persona-icon{font-size:32px;margin-bottom:8px}
+        .persona-card h4{font-size:15px;color:#1a1a1a;margin-bottom:6px;font-family:'Inter',sans-serif;font-weight:600}
+        .persona-card p{font-size:13px;color:#555;line-height:1.5}
 
         /* Comparison Table */
-        .comparison-section {
-            padding: 48px 16px;
-            background: #1a1a2e;
-            color: #fff;
-        }
-
-        .comparison-table {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-
-        .comparison-table th {
-            padding: 12px;
-            text-align: left;
-            font-size: 14px;
-            font-weight: 600;
-            border-bottom: 2px solid rgba(255,255,255,0.1);
-        }
-
-        .comparison-table th:first-child {
-            width: 55%;
-        }
-
-        .comparison-table td {
-            padding: 12px;
-            font-size: 14px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            vertical-align: top;
-        }
-
-        .check-yes {
-            color: #22c55e;
-            font-weight: 700;
-        }
-
-        .check-no {
-            color: #ef4444;
-            font-weight: 700;
-        }
+        .comparison-section{padding:48px 16px;background:#1a1a2e;color:#fff}
+        .comparison-table{width:100%;max-width:700px;margin:0 auto;border-collapse:collapse}
+        .comparison-table th{padding:12px 8px;text-align:center;font-size:13px;font-weight:600;border-bottom:2px solid rgba(255,255,255,.1)}
+        .comparison-table th:first-child{text-align:left;width:35%}
+        .comparison-table th.col-us{color:#0d9488;background:rgba(13,148,136,.1);border-radius:8px 8px 0 0}
+        .comparison-table td{padding:10px 8px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:middle;text-align:center}
+        .comparison-table td:first-child{text-align:left;font-weight:500}
+        .check-yes{color:#22c55e;font-weight:700}
+        .check-no{color:#ef4444;font-weight:700}
+        .check-partial{color:#f59e0b;font-weight:600}
 
         /* Review Carousel */
-        .reviews-section {
-            padding: 48px 16px;
-            background: #fff;
-        }
-
-        .reviews-carousel {
-            display: flex;
-            gap: 16px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            padding: 0 16px 16px;
-            scrollbar-width: none;
-        }
-
-        .reviews-carousel::-webkit-scrollbar {
-            display: none;
-        }
-
-        .review-card {
-            flex: 0 0 280px;
-            scroll-snap-align: start;
-            background: #f9fafb;
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .review-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .review-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .review-name {
-            font-weight: 600;
-            font-size: 15px;
-            color: #1a1a1a;
-        }
-
-        .review-badge {
-            font-size: 11px;
-            color: #0d9488;
-            font-weight: 500;
-        }
-
-        .review-stars {
-            color: #f59e0b;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .review-text {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-        }
+        .reviews-section{padding:48px 16px;background:#fff}
+        .reviews-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:0 16px 16px;scrollbar-width:none}
+        .reviews-carousel::-webkit-scrollbar{display:none}
+        .review-card{flex:0 0 280px;scroll-snap-align:start;background:#f9fafb;border-radius:12px;padding:20px;border:1px solid #e5e7eb}
+        .review-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+        .review-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover}
+        .review-name{font-weight:600;font-size:15px;color:#1a1a1a}
+        .review-badge{font-size:11px;color:#0d9488;font-weight:500}
+        .review-stars{color:#f59e0b;margin-bottom:8px;font-size:14px}
+        .review-text{font-size:14px;color:#555;line-height:1.6}
+        .review-timeline{margin-top:10px;padding-top:10px;border-top:1px solid #e5e7eb}
+        .review-timeline span{font-size:12px;color:#0d9488;font-weight:600}
 
         /* Media Logos */
-        .media-section {
-            padding: 32px 16px;
-            background: #f9fafb;
-            text-align: center;
-        }
+        .media-section{padding:32px 16px;background:#f9fafb;text-align:center}
+        .media-section h3{font-size:12px;text-transform:uppercase;letter-spacing:3px;color:#9ca3af;margin-bottom:16px;font-family:'Inter',sans-serif;font-weight:600}
+        .media-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;align-items:center}
+        .media-logo-text{font-size:14px;font-weight:700;color:#9ca3af;padding:8px 16px;border:1px solid #e5e7eb;border-radius:8px;letter-spacing:.5px}
 
-        .media-section h3 {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #9ca3af;
-            margin-bottom: 16px;
-            font-family: 'Inter', sans-serif;
-        }
+        /* Guarantee */
+        .guarantee-section{padding:48px 16px;background:#f0fdfa;text-align:center}
+        .guarantee-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid #0d9488;border-radius:12px;padding:16px 24px;margin-bottom:16px}
+        .guarantee-badge .shield{font-size:36px}
+        .guarantee-badge .g-text{text-align:left}
+        .guarantee-badge .g-text strong{display:block;font-size:18px;color:#0d9488}
+        .guarantee-badge .g-text span{font-size:13px;color:#555}
+        .guarantee-list{list-style:none;max-width:400px;margin:16px auto 0}
+        .guarantee-list li{font-size:14px;color:#555;padding:6px 0;display:flex;align-items:center;gap:8px}
+        .guarantee-list li::before{content:"✓";color:#22c55e;font-weight:700;font-size:16px}
 
-        .media-logos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
-            align-items: center;
-        }
+        /* FAQ */
+        .faq-section{padding:48px 16px;background:#1a1a2e;color:#fff}
+        .faq-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;margin-bottom:12px;overflow:hidden;max-width:600px;margin-left:auto;margin-right:auto}
+        .faq-question{width:100%;background:none;border:none;color:#fff;padding:16px 20px;font-size:15px;font-weight:600;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif}
+        .faq-question .arrow{transition:transform .2s;font-size:18px;color:#0d9488}
+        .faq-item.open .faq-question .arrow{transform:rotate(180deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}
+        .faq-answer p{padding:0 20px 16px;font-size:14px;color:rgba(255,255,255,.7);line-height:1.6}
 
-        .media-logos img {
-            height: 32px;
-            width: auto;
-            opacity: 0.6;
-        }
+        /* Final CTA */
+        .final-cta{padding:48px 16px;background:linear-gradient(180deg,#1a1a2e 0%,#0d9488 100%);text-align:center;color:#fff}
+        .final-cta h2{font-size:24px;margin-bottom:16px;color:#fff}
+        .final-cta p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+        .final-cta .cta-btn{border:2px solid rgba(255,255,255,.3)}
 
-        /* FAQ Section */
-        .faq-section {
-            padding: 48px 16px;
-            background: #1a1a2e;
-            color: #fff;
-        }
-
-        .faq-item {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            margin-bottom: 12px;
-            overflow: hidden;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            color: #fff;
-            padding: 16px 20px;
-            font-size: 15px;
-            font-weight: 600;
-            text-align: left;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .faq-question .arrow {
-            transition: transform 0.2s;
-            font-size: 18px;
-            color: #0d9488;
-        }
-
-        .faq-item.open .faq-question .arrow {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-answer p {
-            padding: 0 20px 16px;
-            font-size: 14px;
-            color: rgba(255,255,255,0.7);
-            line-height: 1.6;
-        }
-
-        /* Final CTA Section */
-        .final-cta {
-            padding: 48px 16px;
-            background: linear-gradient(180deg, #f0fdfa 0%, #fff 100%);
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-size: 24px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-
-        .final-cta p {
-            font-size: 15px;
-            color: #555;
-            margin-bottom: 24px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        /* Sticky Footer */
+        .sticky-footer{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#0d9488 0%,#0a7a70 100%);padding:12px 16px;z-index:999;transform:translateY(100%);transition:transform .3s ease;display:flex;align-items:center;justify-content:center;gap:12px}
+        .sticky-footer.visible{transform:translateY(0)}
+        .sticky-footer .sticky-text{color:#fff;font-size:14px;font-weight:600}
+        .sticky-footer .sticky-btn{background:#fff;color:#0d9488;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .2s}
+        .sticky-footer .sticky-btn:hover{background:#f0fdfa}
 
         /* Footer */
-        .footer {
-            padding: 24px 16px;
-            background: #1a1a2e;
-            color: rgba(255,255,255,0.5);
-            text-align: center;
-            font-size: 12px;
-            line-height: 1.8;
-        }
-
-        .footer a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: underline;
-        }
+        .footer{padding:24px 16px;background:#1a1a2e;color:rgba(255,255,255,.5);text-align:center;font-size:12px;line-height:1.8}
+        .footer a{color:rgba(255,255,255,.7);text-decoration:underline}
 
         /* Responsive */
-        @media (min-width: 768px) {
-            .hero {
-                padding: 60px 24px;
-            }
-
-            .hero h1 {
-                font-size: 48px;
-            }
-
-            .hero .sub-headline {
-                font-size: 18px;
-            }
-
-            .section {
-                padding: 64px 24px;
-            }
-
-            .section-title {
-                font-size: 32px;
-            }
-
-            .edu-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .review-card {
-                flex: 0 0 320px;
-            }
-
-            .founder-text {
-                font-size: 16px;
-            }
-
-            .cta-btn {
-                font-size: 18px;
-                padding: 18px 40px;
-            }
+        @media(min-width:768px){
+            .hero{padding:60px 24px}
+            .hero h1{font-size:48px}
+            .hero .sub-headline{font-size:18px}
+            .section{padding:64px 24px}
+            .section-title{font-size:32px}
+            .pathways-grid{max-width:700px}
+            .pathway-box{padding:24px}
+            .review-card{flex:0 0 320px}
+            .founder-text{font-size:16px}
+            .cta-btn{font-size:18px;padding:18px 40px}
+            .howto-grid{grid-template-columns:1fr 1fr 1fr}
+            .personas-grid{max-width:700px}
         }
 
-        @media (min-width: 1024px) {
-            .hero {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 48px;
-                max-width: 1000px;
-                margin: 0 auto;
-                text-align: left;
-            }
-
-            .hero-text {
-                flex: 1;
-            }
-
-            .hero-product-img {
-                flex: 0 0 300px;
-            }
-
-            .hero .cta-btn {
-                margin: 0;
-            }
-
-            .reviews-carousel {
-                justify-content: center;
-            }
+        @media(min-width:1024px){
+            .hero{display:flex;align-items:center;justify-content:center;gap:48px;max-width:1000px;margin:0 auto;text-align:left}
+            .hero-text{flex:1}
+            .hero-product-img{flex:0 0 300px}
+            .hero .cta-btn{margin:0}
+            .reviews-carousel{justify-content:center}
+            .pathways-grid{grid-template-columns:repeat(4,1fr)}
         }
+
+        /* Scroll reveal */
+        .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+        .reveal.visible{opacity:1;transform:translateY(0)}
     </style>
 </head>
 <body>
 
-    <!-- 1. Sticky Countdown Banner -->
+    <!-- 1. Countdown Banner -->
     <div class="countdown-banner">
         <span class="badge">SUMMER SALE</span>
         SAVE UP TO $120 + FREE SHIPPING
@@ -756,19 +234,26 @@
         </div>
     </div>
 
-    <!-- 2. Hero Section with Repel-to-Attract Hook -->
+    <!-- 2. Hero Section -->
     <section class="hero">
         <div class="hero-text">
             <h1><span class="caps">STOP SETTLING</span> For Stiff Mornings, Achy Joints & Constant Inflammation</h1>
-            <p class="sub-headline">Discover the ancient botanical formula that helped civilizations thrive for centuries, now clinically formulated for your body.</p>
+            <p class="sub-headline">Discover the clinically-formulated botanical formula that targets all 4 inflammation pathways, so your body can finally heal instead of just coping.</p>
             <a href="#pricing" class="cta-btn"><span class="icon">🌿</span> UNLOCK NATURAL RELIEF NOW</a>
         </div>
         <div class="hero-product-img">
-            <img src="https://placehold.co/400x500/e8f5e9/0d9488?text=Inflammation+Pro" alt="Inflammation Pro bottle">
+            <div style="width:280px;height:350px;margin:0 auto;background:linear-gradient(145deg,#e0f2f1 0%,#b2dfdb 50%,#0d9488 100%);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 20px 40px rgba(13,148,136,.3);position:relative;overflow:hidden">
+                <div style="position:absolute;top:0;left:0;right:0;height:60px;background:linear-gradient(180deg,rgba(255,255,255,.2),transparent)"></div>
+                <div style="font-size:48px;margin-bottom:8px">🌿</div>
+                <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.2)">Inflammation</div>
+                <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.2)">Pro</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.8);margin-top:8px;letter-spacing:2px;text-transform:uppercase">Goodness Lover</div>
+                <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#fff"></div>
+            </div>
         </div>
     </section>
 
-    <!-- 4. Social Proof Bar -->
+    <!-- 3. Social Proof Bar -->
     <div class="social-proof">
         <span class="stars">★★★★★</span>
         <span>4.82/5</span>
@@ -776,20 +261,14 @@
         <strong>80,000+</strong> Happy Customers
     </div>
 
-    <!-- 5. Trust Badges -->
+    <!-- 4. Trust Badges -->
     <div class="trust-badges">
-        <div class="trust-badge">
-            <span class="check">✓</span> 365-Day Money Back Guarantee
-        </div>
-        <div class="trust-badge">
-            <span class="check">✓</span> Free Shipping
-        </div>
-        <div class="trust-badge">
-            <span class="check">✓</span> Secure Checkout
-        </div>
+        <div class="trust-badge"><span class="check">✓</span> 365-Day Money Back Guarantee</div>
+        <div class="trust-badge"><span class="check">✓</span> Free Shipping</div>
+        <div class="trust-badge"><span class="check">✓</span> Secure Checkout</div>
     </div>
 
-    <!-- 7. Scrolling Text Marquee -->
+    <!-- 5. Scrolling Marquee -->
     <div class="marquee-wrapper">
         <div class="marquee-content">
             <span>🌿 SUMMER SALE: SAVE UP TO $120 • FREE SHIPPING ON ALL ORDERS • 365-DAY GUARANTEE • 80,000+ CUSTOMERS TRUST US • 🌿 SUMMER SALE: SAVE UP TO $120 • FREE SHIPPING ON ALL ORDERS • 365-DAY GUARANTEE • 80,000+ CUSTOMERS TRUST US •</span>
@@ -797,213 +276,343 @@
         </div>
     </div>
 
-    <!-- 8. Founder Story Section -->
+    <!-- 6. NEW: 4 Inflammation Pathways Diagram -->
+    <section class="pathways-section">
+        <h2 class="section-title reveal">The 4 Inflammation Pathways Your Body Can't Ignore</h2>
+        <div class="pathways-grid reveal">
+            <div class="pathway-box">
+                <div class="pathway-icon">🔥</div>
+                <h4>NF-kB</h4>
+                <p>Your "master inflammation switch" that triggers the entire inflammatory cascade</p>
+            </div>
+            <div class="pathway-box">
+                <div class="pathway-icon">🧬</div>
+                <h4>COX-2</h4>
+                <p>Your "pain signal amplifier" that turns minor aches into constant throbbing</p>
+            </div>
+            <div class="pathway-box">
+                <div class="pathway-icon">🦠</div>
+                <h4>Gut Barrier</h4>
+                <p>Your "inflammation firewall" that, when compromised, leaks toxins into your bloodstream</p>
+            </div>
+            <div class="pathway-box">
+                <div class="pathway-icon">⚡</div>
+                <h4>Oxidative Stress</h4>
+                <p>Your "cellular damage cascade" that accelerates aging and joint deterioration</p>
+            </div>
+        </div>
+        <p class="pathway-tagline reveal">If even one is unchecked, inflammation wins.</p>
+        <div class="pathway-cta reveal">
+            <a href="#pricing" class="cta-btn"><span class="icon">🌿</span> SUPPORT ALL 4 PATHWAYS NATURALLY</a>
+        </div>
+    </section>
+
+    <!-- 7. NEW: "What a Day Looks Like" Timeline -->
+    <section class="timeline-section">
+        <h2 class="section-title reveal">What a Day Looks Like With Inflammation Pro</h2>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-node">☀️</div>
+                <div class="timeline-time">Morning</div>
+                <div class="timeline-title">You wake up and actually get out of bed</div>
+                <div class="timeline-desc">Take 1 capsule with breakfast. Within days, you notice your hands don't feel like rusty hinges. That morning stiffness that used to steal your first hour? Gone.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-node">🌤️</div>
+                <div class="timeline-time">Midday</div>
+                <div class="timeline-title">You're focused on your day, not your pain</div>
+                <div class="timeline-desc">You're moving through your to-do list without constantly shifting in your chair. The afternoon slump that used to floor you? It doesn't show up anymore.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-node">🌅</div>
+                <div class="timeline-time">Evening</div>
+                <div class="timeline-title">You cook, play, and live without bracing yourself</div>
+                <div class="timeline-desc">Take your second capsule with dinner. You cook without wincing. You play with your grandkids without that mental countdown to when you need to sit down.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-node">🌙</div>
+                <div class="timeline-time">Night</div>
+                <div class="timeline-title">You fall asleep without that deep, throbbing ache</div>
+                <div class="timeline-desc">Your body rests instead of just enduring. No more propping pillows under your knees. No more waking up at 3am because your joints are on fire.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Founder Story -->
     <section class="founder-section">
-        <div style="text-align: center;">
+        <div style="text-align:center">
             <div class="founder-img-wrapper">
-                <img src="https://placehold.co/300x400/e0f2f1/0d9488?text=Sarah+Otto" alt="Sarah Otto, Founder of Goodness Lover">
+                <div style="width:120px;height:120px;border-radius:50%;background:#0d9488;display:flex;align-items:center;justify-content:center;margin:0 auto;color:#fff;font-size:36px;font-weight:700;font-family:'Playfair Display',serif;box-shadow:0 4px 12px rgba(13,148,136,.3)">SO</div>
                 <div class="founder-badge">FOUNDER OF GOODNESS LOVER!</div>
             </div>
         </div>
-        <p class="founder-intro">Hey, I'm Sarah! Founder of Goodness Lover</p>
-        <ul class="pain-list">
-            <li>Joint Pain</li>
-            <li>Chronic Inflammation</li>
-            <li>Stiff Mornings</li>
-            <li>Fatigue</li>
+        <p class="founder-intro reveal">Hey, I'm Sarah! I know your pain because it was mine too.</p>
+        <ul class="pain-list reveal">
+            <li>🦴 Joint Pain</li>
+            <li>🔥 Chronic Inflammation</li>
+            <li>😫 Stiff Mornings</li>
+            <li>😴 Crushing Fatigue</li>
         </ul>
-        <p class="founder-text">I know what it's like to wake up feeling twice your age. For years, I dealt with joint pain that made simple tasks feel impossible. Getting out of bed, opening jars, even playing with my kids, everything hurt.</p>
-        <p class="founder-text"><em>Then, everything changed when I discovered the science of bioavailable turmeric...</em></p>
-        <p class="founder-text">I Tried Everything From:</p>
-        <ul class="tried-list">
+        <p class="founder-text reveal">I know what it's like to wake up feeling twice your age. For years, I dealt with joint pain that made simple tasks feel impossible. Getting out of bed, opening jars, even playing with my kids, everything hurt.</p>
+        <p class="founder-text reveal"><em>Then, everything changed when I discovered the science of bioavailable turmeric and how it targets inflammation at the source...</em></p>
+        <p class="founder-text reveal" style="font-weight:600;color:#1a1a1a">I Tried Everything:</p>
+        <ul class="tried-list reveal">
             <li>NSAIDs</li>
             <li>Ice Packs</li>
             <li>Physical Therapy</li>
             <li>Expensive Specialists</li>
             <li>Generic Turmeric</li>
-            <li>That Didn't Absorb</li>
+            <li>That Never Absorbed</li>
         </ul>
     </section>
 
-    <!-- 9. Education Section -->
+    <!-- 9. NEW: Category Education (PQ7 "What's The Difference?" reframe) -->
     <section class="edu-section">
-        <h2 class="section-title">Why I Fell In Love With Bioavailable Turmeric</h2>
-        <div class="edu-grid">
-            <div class="edu-card">
-                <h4>200x Better Absorption</h4>
-                <p>Our formula uses black pepper extract to increase turmeric absorption by up to 200x compared to generic supplements.</p>
-            </div>
-            <div class="edu-card">
-                <h4>Turmeric + Boswellia Combo</h4>
-                <p>Two of nature's most powerful anti-inflammatory botanicals working together for maximum relief.</p>
-            </div>
-            <div class="edu-card">
-                <h4>Targets Root Cause</h4>
-                <p>Doesn't just mask symptoms. Goes after inflammation at the source for lasting relief.</p>
-            </div>
-            <div class="edu-card">
-                <h4>Not Just Masking Symptoms</h4>
-                <p>Unlike painkillers that hide the problem, Inflammation Pro supports your body's natural healing process.</p>
-            </div>
-        </div>
-        <div class="ingredient-imgs">
-            <img src="https://placehold.co/200x200/fff8e1/795548?text=Turmeric" alt="Turmeric Root">
-            <img src="https://placehold.co/200x200/f1f8e9/689f38?text=Boswellia" alt="Boswellia Resin">
-            <img src="https://placehold.co/200x200/fbe9e7/d84315?text=Black+Pepper" alt="Black Pepper">
+        <h2 class="section-title reveal">What's The Difference?</h2>
+        <div class="edu-box reveal">
+            <p><strong>Generic turmeric supplements support general wellness, and that's great. But chronic inflammation? That's a completely different battle.</strong></p>
+            <br>
+            <p>Most turmeric never even absorbs. Your body eliminates 95% of it. That's like paying for a full tank of gas and only getting a thimble-full.</p>
+            <br>
+            <p><strong>Inflammation Pro uses a patented bioavailable formulation</strong> with 200x absorption, so the active compounds actually reach your joints instead of going straight through you.</p>
         </div>
     </section>
 
     <!-- 10. Problem/Solution -->
     <section class="problem-section">
-        <h2 class="section-title">Here's The Problem...</h2>
-        <div class="problem-box">
-            <p><strong>95% of generic turmeric is just eliminated by your body.</strong> You take it, but barely any gets absorbed. That's why most turmeric supplements do almost nothing for your joints.</p>
+        <h2 class="section-title reveal">Here's The Problem...</h2>
+        <div class="problem-box reveal">
+            <p><strong>95% of generic turmeric is just eliminated by your body.</strong> You take it, but barely any gets absorbed. That's why most turmeric supplements do almost nothing for your joints. You're literally flushing money away.</p>
         </div>
-        <div class="solution-box">
-            <p><strong>Inflammation Pro uses a bioavailable formulation</strong> that your body can actually absorb and use. And yes, I tested it myself for 6 months before launching it to the world.</p>
+        <div class="solution-box reveal">
+            <p><strong>Inflammation Pro uses a bioavailable formulation</strong> that your body can actually absorb and use. The same compounds, engineered to survive your digestive system and reach your joints where they're needed most.</p>
         </div>
     </section>
 
-    <!-- 11. Comparison Table -->
+    <!-- 11. NEW: How To Use 3-Step -->
+    <section class="howto-section">
+        <h2 class="section-title reveal">How To Use Inflammation Pro</h2>
+        <div class="howto-grid reveal">
+            <div class="howto-step">
+                <div class="howto-number">1</div>
+                <div class="howto-content">
+                    <h4>Take 2 capsules daily</h4>
+                    <p>One with breakfast, one with dinner. Simple.</p>
+                </div>
+            </div>
+            <div class="howto-step">
+                <div class="howto-number">2</div>
+                <div class="howto-content">
+                    <h4>Stay consistent</h4>
+                    <p>Botanical compounds build over time. Best results at 4 to 8 weeks.</p>
+                </div>
+            </div>
+            <div class="howto-step">
+                <div class="howto-number">3</div>
+                <div class="howto-content">
+                    <h4>Feel the difference</h4>
+                    <p>Notice less stiffness, more mobility, and energy that actually lasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. NEW: Who It's For (Positive Personas) -->
+    <section class="personas-section">
+        <h2 class="section-title reveal">Who Is Inflammation Pro For?</h2>
+        <div class="personas-grid reveal">
+            <div class="persona-card">
+                <div class="persona-icon">🏃</div>
+                <h4>Active Agers</h4>
+                <p>You want to keep moving without your body fighting you every step of the way</p>
+            </div>
+            <div class="persona-card">
+                <div class="persona-icon">👨‍👩‍👧‍👦</div>
+                <h4>Busy Parents</h4>
+                <p>You don't have time to feel terrible, there's too much depending on you</p>
+            </div>
+            <div class="persona-card">
+                <div class="persona-icon">💻</div>
+                <h4>Desk Workers</h4>
+                <p>Your back and neck scream by 3pm and you're tired of pretending it's normal</p>
+            </div>
+            <div class="persona-card">
+                <div class="persona-icon">🚴</div>
+                <h4>Weekend Warriors</h4>
+                <p>You refuse to let soreness dictate your schedule or steal your hobbies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. NEW: 3-Way Comparison Table -->
     <section class="comparison-section">
-        <h2 class="section-title" style="color: #fff;">What's In Your Supplement?</h2>
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>Inflammation Pro</th>
-                    <th>Generic Turmeric</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Bioavailable Formula</td>
-                    <td class="check-yes">✓</td>
-                    <td class="check-no">✗ Poor absorption</td>
-                </tr>
-                <tr>
-                    <td>Turmeric + Boswellia Combo</td>
-                    <td class="check-yes">✓</td>
-                    <td class="check-no">✗ Turmeric only</td>
-                </tr>
-                <tr>
-                    <td>Black Pepper Extract</td>
-                    <td class="check-yes">✓ 200x absorption</td>
-                    <td class="check-no">✗ No enhancer</td>
-                </tr>
-                <tr>
-                    <td>Targets Root Cause</td>
-                    <td class="check-yes">✓</td>
-                    <td class="check-no">✗ Masks symptoms</td>
-                </tr>
-                <tr>
-                    <td>Money Back Guarantee</td>
-                    <td class="check-yes">✓ 365 days</td>
-                    <td class="check-no">✗ 30-day (if any)</td>
-                </tr>
-                <tr>
-                    <td>Third-Party Tested</td>
-                    <td class="check-yes">✓</td>
-                    <td class="check-no">✗ Unverified</td>
-                </tr>
-                <tr>
-                    <td>Doctor Formulated</td>
-                    <td class="check-yes">✓</td>
-                    <td class="check-no">✗ Generic blends</td>
-                </tr>
-            </tbody>
-        </table>
+        <h2 class="section-title reveal">How Does Inflammation Pro Compare?</h2>
+        <div class="reveal" style="overflow-x:auto">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th class="col-us">Inflammation Pro</th>
+                        <th>Generic Turmeric</th>
+                        <th>NSAIDs / Pain Meds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bioavailable Formula</td>
+                        <td class="check-yes">✓ 200x absorption</td>
+                        <td class="check-no">✗ Less than 5% absorbed</td>
+                        <td style="color:#999">N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Pathway Support</td>
+                        <td class="check-yes">✓ All 4 pathways</td>
+                        <td class="check-partial">Partial / indirect</td>
+                        <td class="check-no">✗ Single pathway</td>
+                    </tr>
+                    <tr>
+                        <td>Addresses Root Cause</td>
+                        <td class="check-yes">✓ Targets source</td>
+                        <td class="check-partial">Minimal</td>
+                        <td class="check-no">✗ Masks symptoms</td>
+                    </tr>
+                    <tr>
+                        <td>Daily Use Safe</td>
+                        <td class="check-yes">✓ Gentle, long-term</td>
+                        <td class="check-partial">Varies</td>
+                        <td class="check-no">✗ Side effects</td>
+                    </tr>
+                    <tr>
+                        <td>No Gut Damage</td>
+                        <td class="check-yes">✓ Protects gut lining</td>
+                        <td style="color:#999">Neutral</td>
+                        <td class="check-no">✗ Known risk</td>
+                    </tr>
+                    <tr>
+                        <td>365-Day Guarantee</td>
+                        <td class="check-yes">✓ Full refund</td>
+                        <td class="check-no">✗ Rarely offered</td>
+                        <td style="color:#999">N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <!-- 6. Review Carousel -->
+    <!-- 14. Review Carousel -->
     <section class="reviews-section">
-        <h2 class="section-title">What Our Customers Say</h2>
-        <div class="reviews-carousel">
+        <h2 class="section-title reveal">What Our Customers Say</h2>
+        <div class="reviews-carousel reveal">
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://placehold.co/80x80/e0f2f1/0d9488?text=ML" alt="Maria L." class="review-avatar">
+                    <div style="width:48px;height:48px;border-radius:50%;background:#0d9488;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;flex-shrink:0">ML</div>
                     <div>
                         <div class="review-name">Maria L.</div>
-                        <div class="review-badge">Verified Buyer</div>
+                        <div class="review-badge">✓ Verified Buyer</div>
                     </div>
                 </div>
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">"Within 10 days my morning stiffness was gone. I couldn't believe the difference. I actually look forward to mornings now!"</p>
+                <div class="review-timeline"><span>📅 Noticed change: Day 10</span></div>
             </div>
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://placehold.co/80x80/e0f2f1/0d9488?text=SK" alt="Sandra K." class="review-avatar">
+                    <div style="width:48px;height:48px;border-radius:50%;background:#0a7a70;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;flex-shrink:0">SK</div>
                     <div>
                         <div class="review-name">Sandra K.</div>
-                        <div class="review-badge">Verified Buyer</div>
+                        <div class="review-badge">✓ Verified Buyer</div>
                     </div>
                 </div>
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">"After 6 weeks I could garden again without pain. My husband noticed I was moving better before I even told him about the supplement."</p>
+                <div class="review-timeline"><span>📅 Noticed change: Week 6</span></div>
             </div>
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://placehold.co/80x80/e0f2f1/0d9488?text=JT" alt="Jennifer T." class="review-avatar">
+                    <div style="width:48px;height:48px;border-radius:50%;background:#0d9488;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;flex-shrink:0">JT</div>
                     <div>
                         <div class="review-name">Jennifer T.</div>
-                        <div class="review-badge">Verified Buyer</div>
+                        <div class="review-badge">✓ Verified Buyer</div>
                     </div>
                 </div>
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">"Month 3 and my doctor asked what changed. My inflammation markers were the best they'd been in years. This stuff is the real deal."</p>
+                <div class="review-timeline"><span>📅 Noticed change: Month 3</span></div>
             </div>
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://placehold.co/80x80/e0f2f1/0d9488?text=DP" alt="Debra P." class="review-avatar">
+                    <div style="width:48px;height:48px;border-radius:50%;background:#0a7a70;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;flex-shrink:0">DP</div>
                     <div>
                         <div class="review-name">Debra P.</div>
-                        <div class="review-badge">Verified Buyer</div>
+                        <div class="review-badge">✓ Verified Buyer</div>
                     </div>
                 </div>
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">"2 weeks in and I stopped reaching for ibuprofen. That alone made it worth it. Now I tell everyone about Inflammation Pro."</p>
+                <div class="review-timeline"><span>📅 Noticed change: Week 2</span></div>
             </div>
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://placehold.co/80x80/e0f2f1/0d9488?text=RN" alt="Rachel N." class="review-avatar">
+                    <div style="width:48px;height:48px;border-radius:50%;background:#0d9488;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;flex-shrink:0">RN</div>
                     <div>
                         <div class="review-name">Rachel N.</div>
-                        <div class="review-badge">Verified Buyer</div>
+                        <div class="review-badge">✓ Verified Buyer</div>
                     </div>
                 </div>
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">"4 months later I feel like I got my life back. I can play with my grandkids again. This is the best investment I've made in my health."</p>
+                <div class="review-timeline"><span>📅 Noticed change: Month 4</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Media Logos -->
+    <!-- 15. Media Logos -->
     <section class="media-section">
         <h3>As Featured In</h3>
         <div class="media-logos">
-            <img src="https://placehold.co/150x50/f5f5f5/333333?text=Healthline" alt="Healthline">
-            <img src="https://placehold.co/150x50/f5f5f5/333333?text=mindbodygreen" alt="mindbodygreen">
-            <img src="https://placehold.co/150x50/f5f5f5/333333?text=Well%2BGood" alt="Well+Good">
-            <img src="https://placehold.co/150x50/f5f5f5/333333?text=WebMD" alt="WebMD">
-            <img src="https://placehold.co/150x50/f5f5f5/333333?text=Harvard+Health" alt="Harvard Health">
+            <div class="media-logo-text">Healthline</div>
+            <div class="media-logo-text">mindbodygreen</div>
+            <div class="media-logo-text">Well+Good</div>
+            <div class="media-logo-text">WebMD</div>
+            <div class="media-logo-text">Harvard Health</div>
         </div>
     </section>
 
-    <!-- 12. FAQ Section -->
-    <section class="faq-section">
-        <h2 class="section-title" style="color: #fff;">Frequently Asked Questions</h2>
+    <!-- 16. Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="reveal">
+            <div class="guarantee-badge">
+                <span class="shield">🛡️</span>
+                <div class="g-text">
+                    <strong>365-Day Money Back Guarantee</strong>
+                    <span>No risk. Full confidence.</span>
+                </div>
+            </div>
+        </div>
+        <p class="reveal" style="font-size:15px;color:#555;max-width:500px;margin:0 auto 16px;line-height:1.6">If you're not completely satisfied with Inflammation Pro, simply contact us within 365 days for a full refund. No questions asked. No hassle.</p>
+        <ul class="guarantee-list reveal">
+            <li>No recurring charges</li>
+            <li>No hidden fees</li>
+            <li>No auto-ship traps</li>
+            <li>Full refund, even if bottles are empty</li>
+        </ul>
+    </section>
 
-        <div class="faq-item">
+    <!-- 17. FAQ Section -->
+    <section class="faq-section">
+        <h2 class="section-title reveal" style="color:#fff">Frequently Asked Questions</h2>
+
+        <div class="faq-item reveal">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 How long until I feel results?
                 <span class="arrow">▼</span>
             </button>
             <div class="faq-answer">
-                <p>Most customers notice a difference within 7 to 14 days. Some feel relief even sooner. For best results, take it consistently for at least 30 days.</p>
+                <p>Most customers notice a difference within 7 to 14 days. Some feel relief even sooner. For best results, take it consistently for at least 30 days. The botanical compounds build in your system over time.</p>
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 Is it safe with my medications?
                 <span class="arrow">▼</span>
@@ -1013,95 +622,119 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 How is this different from turmeric at the store?
                 <span class="arrow">▼</span>
             </button>
             <div class="faq-answer">
-                <p>Store-bought turmeric has extremely low bioavailability, meaning your body barely absorbs it. Inflammation Pro uses a patented formulation with black pepper extract that increases absorption by up to 200x.</p>
+                <p>Store-bought turmeric has extremely low bioavailability, meaning your body barely absorbs it. Inflammation Pro uses a patented formulation with black pepper extract that increases absorption by up to 200x. Most generic turmeric is eliminated before it ever reaches your joints.</p>
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 How do I take it?
                 <span class="arrow">▼</span>
             </button>
             <div class="faq-answer">
-                <p>Take 2 capsules daily with food. Consistency is key, so we recommend taking it at the same time each day, ideally with breakfast or lunch.</p>
+                <p>Take 2 capsules daily with food, one with breakfast and one with dinner. Consistency is key, so we recommend taking it at the same time each day for best results.</p>
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 What if it doesn't work for me?
                 <span class="arrow">▼</span>
             </button>
             <div class="faq-answer">
-                <p>We offer a full 365-day money back guarantee. If you're not satisfied for any reason, simply contact us for a complete refund. No questions asked.</p>
+                <p>We offer a full 365-day money back guarantee. If you're not satisfied for any reason, simply contact us for a complete refund. No questions asked. You can even return empty bottles.</p>
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item reveal">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 Is it third-party tested?
                 <span class="arrow">▼</span>
             </button>
             <div class="faq-answer">
-                <p>Yes! Every batch is third-party tested for purity and potency. We provide a Certificate of Analysis upon request so you know exactly what you're getting.</p>
+                <p>Yes! Every batch is third-party tested for purity and potency. We provide a Certificate of Analysis upon request so you know exactly what you're putting in your body.</p>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
+    <!-- 18. Final CTA -->
     <section class="final-cta" id="pricing">
-        <h2>Ready To Feel The Difference?</h2>
-        <p>Join 80,000+ customers who chose natural relief over masking symptoms. Your 365-day guarantee means there's zero risk.</p>
-        <a href="#" class="cta-btn"><span class="icon">🌿</span> UNLOCK NATURAL RELIEF NOW</a>
+        <h2 class="reveal">Ready To Feel The Difference?</h2>
+        <p class="reveal">Join 80,000+ customers who chose natural relief over masking symptoms. Your 365-day guarantee means there's zero risk.</p>
+        <div class="reveal">
+            <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn"><span class="icon">🌿</span> UNLOCK NATURAL RELIEF NOW</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <p>© 2026 Goodness Lover. All Rights Reserved.</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
-        <p style="margin-top: 12px;">Individual results may vary. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <p style="margin-top:12px">Individual results may vary. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
     </footer>
+
+    <!-- Sticky Footer -->
+    <div class="sticky-footer" id="stickyFooter">
+        <span class="sticky-text">🌿 Inflammation Pro - Summer Sale</span>
+        <a href="#pricing" class="sticky-btn">CLAIM OFFER</a>
+    </div>
 
     <script>
         // Countdown Timer
-        function updateCountdown() {
-            const now = new Date();
-            const hours = 47 - now.getHours();
-            const minutes = 59 - now.getMinutes();
-            const seconds = 59 - now.getSeconds();
-
-            document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        (function(){
+            var end=new Date();
+            end.setHours(end.getHours()+47,end.getMinutes()+59,end.getSeconds()+59);
+            function tick(){
+                var now=new Date(),diff=Math.max(0,Math.floor((end-now)/1000));
+                var h=Math.floor(diff/3600),m=Math.floor((diff%3600)/60),s=diff%60;
+                document.getElementById('countdown-hours').textContent=h<10?'0'+h:h;
+                document.getElementById('countdown-minutes').textContent=m<10?'0'+m:m;
+                document.getElementById('countdown-seconds').textContent=s<10?'0'+s:s;
+            }
+            setInterval(tick,1000);tick();
+        })();
 
         // FAQ Accordion
-        function toggleFAQ(button) {
-            const item = button.parentElement;
-            const answer = item.querySelector('.faq-answer');
-            const isOpen = item.classList.contains('open');
-
-            // Close all items
-            document.querySelectorAll('.faq-item').forEach(function(el) {
+        function toggleFAQ(btn){
+            var item=btn.parentElement,answer=item.querySelector('.faq-answer'),isOpen=item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(function(el){
                 el.classList.remove('open');
-                el.querySelector('.faq-answer').style.maxHeight = '0';
+                el.querySelector('.faq-answer').style.maxHeight='0';
             });
-
-            // Open clicked item if it was closed
-            if (!isOpen) {
-                item.classList.add('open');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-            }
+            if(!isOpen){item.classList.add('open');answer.style.maxHeight=answer.scrollHeight+'px';}
         }
+
+        // Sticky Footer with IntersectionObserver
+        (function(){
+            var footer=document.getElementById('stickyFooter');
+            var hero=document.querySelector('.hero');
+            if(!hero||!footer)return;
+            var obs=new IntersectionObserver(function(entries){
+                entries.forEach(function(e){
+                    if(e.isIntersecting){footer.classList.remove('visible')}
+                    else{footer.classList.add('visible')}
+                });
+            },{threshold:0.1});
+            obs.observe(hero);
+        })();
+
+        // Scroll Reveal
+        (function(){
+            var els=document.querySelectorAll('.reveal');
+            if(!els.length)return;
+            var obs=new IntersectionObserver(function(entries){
+                entries.forEach(function(e){
+                    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+                });
+            },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+            els.forEach(function(el){obs.observe(el)});
+        })();
     </script>
 
 </body>
