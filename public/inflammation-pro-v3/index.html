@@ -3,336 +3,678 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inflammation Pro - Targeted 3-Phase Inflammation Support | Goodness Lover</title>
-  <meta name="description" content="Inflammation Pro uses a 3-phase approach to soothe, repair, and protect your joints. Backed by clinical research on bioavailability.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            teal: { 600: '#0D9488', 700: '#0F766E', 800: '#115E59', 900: '#134E4A' },
-            cream: '#FDF8F0',
-            warmgray: { 100: '#F5F0EB', 200: '#E8E0D8', 300: '#D4C8BC' },
-            gold: { 400: '#F0F757', 500: '#E8EF45' },
-            urgency: '#F0F757'
-          },
-          fontFamily: {
-            serif: ['Fraunces', 'Georgia', 'serif'],
-            sans: ['Montserrat', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <title>STOP SETTLING For Inflammation, Stiffness & Fatigue | Inflammation Pro</title>
+  <meta name="description" content="Inflammation Pro uses a 3-phase approach to soothe, repair, and protect your joints. Backed by clinical research. 365-day guarantee.">
   <style>
-    /* Smooth scroll */
-    html { scroll-behavior: smooth; }
-
-    /* Countdown bar gradient */
-    .countdown-gradient {
-      background: linear-gradient(135deg, #0D9488 0%, #115E59 50%, #134E4A 100%);
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #1E293B;
+      background: #FEFCE8;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    /* CTA button */
+    :root {
+      --teal: #0D9488;
+      --teal-dark: #0F766E;
+      --teal-deeper: #115E59;
+      --cream: #FEFCE8;
+      --gold: #D97706;
+      --gold-light: #F59E0B;
+      --slate: #1E293B;
+      --slate-light: #475569;
+      --slate-lighter: #64748B;
+      --warmgray-100: #F1F0EB;
+      --warmgray-200: #E8E0D8;
+      --danger: #DC2626;
+      --faq-bg: #1E293B;
+      --faq-accent: #0D9488;
+    }
+
+    /* COUNTDOWN BAR */
+    .countdown-bar {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deeper) 50%, var(--teal-dark) 100%);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 8px 16px;
+      text-align: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .countdown-bar .timer { color: #F59E0B; font-family: 'Courier New', monospace; font-weight: 700; }
+    .countdown-bar .sale-tag { color: #F59E0B; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; }
+
+    /* NAV */
+    .nav { background: #fff; border-bottom: 1px solid var(--warmgray-200); padding: 10px 16px; }
+    .nav-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 8px; }
+    .nav-logo-icon { width: 32px; height: 32px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 14px; }
+    .nav-logo-text { font-weight: 700; font-size: 16px; color: var(--teal-deeper); }
+    .nav-tagline { font-size: 11px; color: var(--slate-lighter); font-style: italic; }
+
+    /* SECTIONS */
+    .section { padding: 48px 16px; }
+    .section-sm { padding: 32px 16px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .container-narrow { max-width: 700px; margin: 0 auto; }
+
+    /* TYPOGRAPHY */
+    .headline { font-size: 28px; font-weight: 900; line-height: 1.15; color: var(--slate); }
+    .headline-lg { font-size: 32px; }
+    .headline .verb { color: var(--teal); text-transform: uppercase; }
+    .subhead { font-size: 15px; color: var(--slate-light); margin-top: 12px; line-height: 1.5; }
+    .section-title { font-size: 24px; font-weight: 900; text-align: center; color: var(--slate); margin-bottom: 8px; }
+    .section-subtitle { font-size: 14px; color: var(--slate-light); text-align: center; max-width: 600px; margin: 0 auto 24px; }
+
+    /* CTA BUTTONS */
     .cta-btn {
-      background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+      display: inline-block;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      position: relative;
+      border: 2px solid var(--gold);
+      box-shadow: 4px 4px 0 var(--gold);
       transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(13,148,136,0.4);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
     }
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(13,148,136,0.5);
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 6px 6px 0 var(--gold); }
+    .cta-btn:active { transform: translateY(0); box-shadow: 2px 2px 0 var(--gold); }
+    .cta-btn-sm { font-size: 14px; padding: 12px 24px; }
+    .cta-btn-full { width: 100%; text-align: center; }
+
+    .cta-btn .crown-icon {
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: middle;
     }
 
-    /* VS badge */
+    /* Corner decorative borders */
+    .cta-corner-wrap { position: relative; display: inline-block; }
+    .cta-corner-wrap::before,
+    .cta-corner-wrap::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-color: var(--gold);
+      border-style: solid;
+    }
+    .cta-corner-wrap::before { top: -6px; left: -6px; border-width: 3px 0 0 3px; }
+    .cta-corner-wrap::after { bottom: -6px; right: -6px; border-width: 0 3px 3px 0; }
+
+    /* SOCIAL PROOF BAR */
+    .social-proof-bar {
+      background: var(--warmgray-100);
+      padding: 12px 16px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--teal-deeper);
+    }
+    .social-proof-bar .count { font-size: 20px; font-weight: 900; }
+    .social-proof-bar .stars { color: #F59E0B; letter-spacing: 2px; }
+
+    /* TRUST BADGES */
+    .trust-badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; margin-top: 12px; }
+    .trust-badge { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--slate-lighter); }
+    .trust-badge svg { flex-shrink: 0; }
+
+    /* MARQUEE */
+    .marquee-wrap { overflow: hidden; background: var(--teal); padding: 12px 0; white-space: nowrap; }
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee-scroll 25s linear infinite;
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .marquee-item .sep { color: var(--gold); font-size: 18px; }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* REVIEW MARQUEE */
+    .review-marquee-wrap { overflow: hidden; padding: 16px 0; background: #fff; border-top: 1px solid var(--warmgray-200); border-bottom: 1px solid var(--warmgray-200); }
+    .review-marquee-track {
+      display: inline-flex;
+      gap: 16px;
+      animation: review-scroll 40s linear infinite;
+    }
+    .review-card {
+      flex-shrink: 0;
+      width: 280px;
+      background: var(--warmgray-100);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .review-card .stars { color: #F59E0B; font-size: 14px; margin-bottom: 6px; }
+    .review-card .text { font-size: 13px; color: var(--slate-light); line-height: 1.5; margin-bottom: 8px; font-style: italic; }
+    .review-card .author { font-size: 12px; font-weight: 700; color: var(--slate); }
+    .review-card .verified { font-size: 10px; color: var(--teal); font-weight: 600; }
+    @keyframes review-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* VS HERO */
+    .vs-section { background: #fff; padding: 48px 16px 40px; text-align: center; }
+    .vs-visual { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 24px 0; }
+    .vs-product-img {
+      width: 120px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid var(--teal);
+      background: var(--warmgray-100);
+    }
+    .vs-generic-img {
+      width: 100px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #CBD5E1;
+      opacity: 0.7;
+      background: var(--warmgray-100);
+    }
     .vs-badge {
-      background: linear-gradient(135deg, #0D9488, #134E4A);
-      color: #F0F757;
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-deeper));
+      color: #F59E0B;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(13,148,136,0.3);
     }
 
-    /* Comparison table check/x */
-    .check { color: #0D9488; }
-    .xmark { color: #DC2626; }
+    /* DISQUALIFICATION */
+    .disqualify-section { background: #FEF2F2; border-top: 3px solid #FCA5A5; }
+    .disqualify-list { list-style: none; padding: 0; }
+    .disqualify-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      font-size: 14px;
+      color: var(--slate-light);
+      border-bottom: 1px solid #FEE2E2;
+    }
+    .disqualify-list li:last-child { border-bottom: none; }
+    .disqualify-list .x-icon { color: #EF4444; font-weight: 700; font-size: 18px; flex-shrink: 0; line-height: 1; }
 
-    /* Sticky footer */
+    /* COMPARISON TABLE */
+    .comparison-section { background: var(--faq-bg); color: #fff; }
+    .comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comparison-table th { padding: 12px; text-align: left; font-weight: 700; border-bottom: 2px solid rgba(255,255,255,0.15); }
+    .comparison-table th:first-child { width: 35%; }
+    .comparison-table .col-us { background: rgba(13,148,136,0.25); text-align: center; }
+    .comparison-table .col-them { background: rgba(255,255,255,0.05); text-align: center; }
+    .comparison-table td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top; }
+    .comparison-table td:first-child { font-weight: 600; color: rgba(255,255,255,0.8); }
+    .comparison-table .col-us td { text-align: center; }
+    .comparison-table .col-them td { text-align: center; color: rgba(255,255,255,0.4); }
+    .comparison-table .check { color: #34D399; font-size: 18px; }
+    .comparison-table .xmark { color: #F87171; font-size: 18px; }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* WHY IT MATTERS */
+    .why-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    .why-card-inner { display: flex; gap: 16px; align-items: flex-start; }
+    .why-card-img { width: 80px; height: 80px; border-radius: 8px; object-fit: cover; flex-shrink: 0; background: var(--warmgray-100); }
+    .why-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; color: var(--slate); }
+    .why-card p { font-size: 13px; color: var(--slate-light); line-height: 1.5; }
+    .why-card .takeaway { font-size: 13px; font-weight: 700; color: var(--teal); margin-top: 8px; }
+
+    /* 3-PHASE */
+    .phase-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .phase-card { background: var(--warmgray-100); border-radius: 12px; padding: 24px 16px; text-align: center; }
+    .phase-num { width: 48px; height: 48px; background: var(--teal); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-weight: 900; font-size: 18px; }
+    .phase-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--slate); }
+    .phase-card p { font-size: 13px; color: var(--slate-light); line-height: 1.5; }
+
+    /* FOUNDER STORY */
+    .founder-section { background: #fff; }
+    .founder-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .founder-photo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--teal); background: var(--warmgray-100); }
+    .founder-name { font-size: 20px; font-weight: 900; color: var(--slate); }
+    .founder-title { font-size: 12px; color: var(--teal); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .pain-list { list-style: none; padding: 0; margin: 16px 0; }
+    .pain-list li { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--slate-light); }
+    .pain-list .cross { color: #F87171; font-weight: 700; font-size: 18px; flex-shrink: 0; }
+    .founder-text { font-size: 14px; color: var(--slate-light); line-height: 1.7; margin-bottom: 16px; }
+    .founder-turning { font-size: 16px; font-weight: 700; color: var(--teal); margin: 20px 0; padding: 12px; background: rgba(13,148,136,0.08); border-radius: 8px; border-left: 4px solid var(--teal); }
+    .tried-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+    .tried-item { font-size: 13px; color: var(--slate-lighter); padding: 8px 12px; background: var(--warmgray-100); border-radius: 6px; display: flex; align-items: center; gap: 6px; }
+    .tried-item .dash { color: #EF4444; font-weight: 700; }
+
+    /* RISK REVERSAL */
+    .risk-section { background: var(--warmgray-100); }
+    .risk-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .risk-card { border-radius: 12px; padding: 24px 20px; }
+    .risk-card.worst { background: #FEF2F2; border: 1px solid #FECACA; }
+    .risk-card.best { background: #F0FDF4; border: 1px solid #BBF7D0; }
+    .risk-card h3 { font-size: 18px; font-weight: 900; margin-bottom: 12px; }
+    .risk-card.worst h3 { color: #DC2626; }
+    .risk-card.best h3 { color: #16A34A; }
+    .risk-card p { font-size: 14px; color: var(--slate-light); line-height: 1.6; }
+
+    /* PRICING */
+    .pricing-section { background: #fff; }
+    .pricing-options { display: flex; flex-direction: column; gap: 16px; max-width: 500px; margin: 0 auto; }
+    .pricing-option {
+      border: 2px solid var(--warmgray-200);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pricing-option.selected { border-color: var(--teal); background: rgba(13,148,136,0.04); box-shadow: 0 0 0 3px rgba(13,148,136,0.15); }
+    .pricing-option:hover { border-color: var(--teal); }
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .pricing-name { font-size: 18px; font-weight: 700; color: var(--slate); margin-bottom: 4px; }
+    .pricing-supply { font-size: 12px; color: var(--slate-lighter); margin-bottom: 8px; }
+    .pricing-price { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 4px; }
+    .pricing-original { font-size: 16px; color: var(--slate-lighter); text-decoration: line-through; }
+    .pricing-current { font-size: 28px; font-weight: 900; color: var(--teal); }
+    .pricing-perday { font-size: 13px; color: var(--gold); font-weight: 600; }
+    .pricing-savings { font-size: 12px; color: var(--teal); font-weight: 600; margin-top: 4px; }
+    .pricing-radio { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 10px; font-size: 12px; color: var(--slate-lighter); }
+    .pricing-radio-dot {
+      width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--warmgray-200);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pricing-option.selected .pricing-radio-dot { border-color: var(--teal); }
+    .pricing-option.selected .pricing-radio-dot::after {
+      content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--teal);
+    }
+
+    /* FAQ DARK */
+    .faq-dark { background: var(--faq-bg); color: #fff; }
+    .faq-dark .faq-block {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-dark .faq-q {
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .faq-dark .faq-chevron {
+      transition: transform 0.3s ease;
+      color: var(--faq-accent);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .faq-dark .faq-block.open .faq-chevron { transform: rotate(180deg); }
+    .faq-dark .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-dark .faq-block.open .faq-a { max-height: 400px; }
+    .faq-dark .faq-a-inner { padding: 0 20px 16px; font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    .faq-dark .faq-a-inner a { color: var(--faq-accent); text-decoration: underline; }
+
+    /* STICKY FOOTER */
     .sticky-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid #E2E8F0;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+      z-index: 90;
+      padding: 10px 16px;
       transform: translateY(100%);
       transition: transform 0.35s ease;
     }
-    .sticky-footer.visible {
-      transform: translateY(0);
-    }
+    .sticky-footer.visible { transform: translateY(0); }
+    .sticky-footer-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .sticky-footer-info { display: flex; align-items: center; gap: 10px; }
+    .sticky-footer-thumb { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; background: var(--warmgray-100); }
+    .sticky-footer-name { font-size: 13px; font-weight: 700; color: var(--slate); }
+    .sticky-footer-price { font-size: 11px; color: var(--slate-lighter); }
 
-    /* FAQ accordion */
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-    .faq-item.open .faq-answer {
-      max-height: 500px;
-      padding-bottom: 1rem;
-    }
-    .faq-item.open .faq-chevron {
-      transform: rotate(180deg);
-    }
-    .faq-chevron {
-      transition: transform 0.3s ease;
-    }
-
-    /* Reveal animations */
+    /* REVEAL ANIMATIONS */
     .reveal {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(24px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* PULSE */
+    @keyframes pulse-soft { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+    .pulse { animation: pulse-soft 2s ease-in-out infinite; }
+
+    /* LIFESTYLE BANNER */
+    .lifestyle-banner { width: 100%; height: 200px; object-fit: cover; display: block; }
+
+    /* SCARCITY */
+    .scarcity-bar { background: #FEF3C7; padding: 10px 16px; text-align: center; font-size: 13px; font-weight: 600; color: #92400E; }
+
+    /* RESPONSIVE */
+    @media (min-width: 640px) {
+      .headline { font-size: 36px; }
+      .headline-lg { font-size: 42px; }
+      .section { padding: 64px 24px; }
+      .section-title { font-size: 28px; }
+      .vs-product-img { width: 160px; height: 210px; }
+      .vs-generic-img { width: 130px; height: 180px; }
+      .vs-badge { width: 72px; height: 72px; font-size: 24px; }
+      .phase-grid { grid-template-columns: repeat(3, 1fr); }
+      .risk-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-options { flex-direction: row; align-items: flex-start; }
+      .pricing-option { flex: 1; }
+      .why-card-inner { gap: 24px; }
+      .why-card-img { width: 100px; height: 100px; }
+      .tried-grid { grid-template-columns: repeat(3, 1fr); }
+      .founder-header { gap: 24px; }
+      .founder-photo { width: 100px; height: 100px; }
+      .lifestyle-banner { height: 320px; }
     }
 
-    /* Marquee */
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .marquee-track {
-      animation: marquee 30s linear infinite;
-    }
-
-    /* Pulse for scarcity */
-    @keyframes pulse-soft {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
-    }
-    .pulse-scarcity {
-      animation: pulse-soft 2s ease-in-out infinite;
+    @media (min-width: 768px) {
+      .headline { font-size: 42px; }
+      .headline-lg { font-size: 48px; }
     }
   </style>
 </head>
-<body class="bg-cream font-sans text-gray-800">
+<body>
 
-  <!-- ======================== -->
-  <!-- COUNTDOWN HEADER BAR     -->
-  <!-- ======================== -->
-  <div id="countdown-bar" class="countdown-gradient text-white py-2 px-4 text-center sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4 text-sm sm:text-base font-semibold">
-      <span class="text-urgency tracking-widest uppercase text-xs sm:text-sm font-bold">Summer Sale</span>
-      <span class="hidden sm:inline text-teal-300">|</span>
+  <!-- COUNTDOWN BAR -->
+  <div class="countdown-bar">
+    <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;">
+      <span class="sale-tag">Summer Sale</span>
+      <span style="color:rgba(255,255,255,0.3);">|</span>
       <span>Offer Ends In:</span>
-      <div id="countdown-timer" class="font-mono text-urgency font-bold tracking-wider" aria-live="polite">
-        <span id="cd-days">02</span>d : <span id="cd-hours">17</span>h : <span id="cd-min">43</span>m : <span id="cd-sec">12</span>s
+      <span class="timer" id="cd-display">02d : 17h : 43m : 12s</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">G</div>
+        <span class="nav-logo-text">Goodness Lover</span>
+      </div>
+      <div class="nav-tagline" style="display:none;">Science-Backed Wellness for Women</div>
+    </div>
+  </nav>
+
+  <!-- HERO: VS COMPARISON -->
+  <section class="vs-section">
+    <div class="container">
+      <h1 class="headline headline-lg reveal" style="margin-bottom:8px;">
+        <span class="verb">STOP SETTLING</span> For<br>Inflammation, Stiffness & Fatigue
+      </h1>
+      <p class="subhead reveal" style="max-width:540px;margin-left:auto;margin-right:auto;">
+        Discover the 3-phase system that soothes, repairs, and protects... now formulated for women who refuse to accept "just live with it."
+      </p>
+
+      <div class="vs-visual reveal">
+        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300&h=400&fit=crop&crop=center" alt="Inflammation Pro supplement bottle" class="vs-product-img" loading="eager">
+        <div class="vs-badge">VS</div>
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&h=400&fit=crop&crop=center" alt="Generic supplements" class="vs-generic-img" loading="eager">
+      </div>
+
+      <!-- CTA with corner borders -->
+      <div class="reveal" style="margin-top:24px;">
+        <div class="cta-corner-wrap">
+          <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn">
+            <svg class="crown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg>
+            UNLOCK YOUR TRUE POWER
+          </a>
+        </div>
+      </div>
+
+      <!-- Social proof bar -->
+      <div class="social-proof-bar reveal" style="margin-top:16px;">
+        <span class="count" id="customer-count">37,000+</span> Happy Customers   <span class="stars">★★★★★</span> 4.8/5
+      </div>
+
+      <!-- Trust badges -->
+      <div class="trust-badges reveal">
+        <div class="trust-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          365-Day Money Back Guarantee
+        </div>
+        <div class="trust-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Free Shipping
+        </div>
+        <div class="trust-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          3rd Party Tested
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLLING TEXT MARQUEE (CSS KEYFRAMES) -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item">SUMMER SALE: GET 18% OFF <span class="sep">♦</span></div>
+      <div class="marquee-item">FREE SHIPPING ON ALL ORDERS <span class="sep">♦</span></div>
+      <div class="marquee-item">365-DAY MONEY BACK GUARANTEE <span class="sep">♦</span></div>
+      <div class="marquee-item">37,000+ HAPPY CUSTOMERS <span class="sep">♦</span></div>
+      <div class="marquee-item">SUMMER SALE: GET 18% OFF <span class="sep">♦</span></div>
+      <div class="marquee-item">FREE SHIPPING ON ALL ORDERS <span class="sep">♦</span></div>
+      <div class="marquee-item">365-DAY MONEY BACK GUARANTEE <span class="sep">♦</span></div>
+      <div class="marquee-item">37,000+ HAPPY CUSTOMERS <span class="sep">♦</span></div>
+      <div class="marquee-item">SUMMER SALE: GET 18% OFF <span class="sep">♦</span></div>
+      <div class="marquee-item">FREE SHIPPING ON ALL ORDERS <span class="sep">♦</span></div>
+      <div class="marquee-item">365-DAY MONEY BACK GUARANTEE <span class="sep">♦</span></div>
+      <div class="marquee-item">37,000+ HAPPY CUSTOMERS <span class="sep">♦</span></div>
+    </div>
+  </div>
+
+  <!-- REVIEW MARQUEE (CSS KEYFRAMES) -->
+  <div class="review-marquee-wrap" aria-label="Customer reviews">
+    <div class="review-marquee-track">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I've tried everything for my joint pain. Nothing worked until Inflammation Pro. After 3 weeks, I could feel the difference."</p>
+        <p class="author">Bonny J.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"My naturopath recommended this and I'm so glad she did. The 3-phase approach makes so much sense."</p>
+        <p class="author">Jean S.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I can walk up stairs without pain again. I didn't realize how much I'd been avoiding until I started feeling better."</p>
+        <p class="author">Leia A.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"Worth every penny. I was taking ibuprofen daily and now I rarely need it. The gut support is what sold me."</p>
+        <p class="author">Fred P.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I feel like myself again after just 3 weeks. My morning stiffness is basically gone."</p>
+        <p class="author">Mary L.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"Finally something that actually works. I've spent hundreds on supplements that did nothing. This one delivered."</p>
+        <p class="author">Valerie M.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I've tried everything for my joint pain. Nothing worked until Inflammation Pro. After 3 weeks, I could feel the difference."</p>
+        <p class="author">Bonny J.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"My naturopath recommended this and I'm so glad she did. The 3-phase approach makes so much sense."</p>
+        <p class="author">Jean S.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I can walk up stairs without pain again. I didn't realize how much I'd been avoiding until I started feeling better."</p>
+        <p class="author">Leia A.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"Worth every penny. I was taking ibuprofen daily and now I rarely need it. The gut support is what sold me."</p>
+        <p class="author">Fred P.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I feel like myself again after just 3 weeks. My morning stiffness is basically gone."</p>
+        <p class="author">Mary L.</p>
+        <p class="verified">✓ Verified Purchase</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"Finally something that actually works. I've spent hundreds on supplements that did nothing. This one delivered."</p>
+        <p class="author">Valerie M.</p>
+        <p class="verified">✓ Verified Purchase</p>
       </div>
     </div>
   </div>
 
-  <!-- ======================== -->
-  <!-- NAV BAR + TAGLINE        -->
-  <!-- ======================== -->
-  <nav class="bg-white border-b border-warmgray-200 py-3 px-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <!-- LOGO PLACEHOLDER -->
-        <!-- IMAGE NEEDED: Goodness Lover logo (wordmark, teal #0D9488) -->
-        <div class="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center text-white font-serif font-bold text-sm">G</div>
-        <span class="font-serif font-bold text-lg text-teal-800">Goodness Lover</span>
-      </div>
-      <div class="hidden sm:block">
-        <span class="text-xs text-gray-500 italic">Science-Backed Wellness for Women</span>
-      </div>
-    </div>
-  </nav>
+  <!-- DISQUALIFICATION SECTION -->
+  <section class="section disqualify-section">
+    <div class="container-narrow">
+      <h2 class="section-title reveal">This Is <span style="color:#DC2626;">NOT</span> For You If...</h2>
+      <p class="section-subtitle reveal">We want to be upfront. Inflammation Pro isn't for everyone.</p>
 
-  <!-- ======================== -->
-  <!-- HERO: VS COMPARISON      -->
-  <!-- ======================== -->
-  <section class="py-10 sm:py-16 px-4 bg-white">
-    <div class="max-w-5xl mx-auto text-center">
-      <h1 class="font-serif font-black text-3xl sm:text-4xl md:text-5xl text-gray-900 leading-tight mb-4 reveal">
-        Inflammation Pro vs. Every<br class="hidden sm:block"> "Joint & Inflammation" Supplement
-      </h1>
-      <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-8 reveal">
-        Check the label on any "premium" joint supplement in your cabinet...
-        One isolated compound. No bioavailability technology. No 3-phase system. No gut-joint connection.
+      <ul class="disqualify-list reveal">
+        <li><span class="x-icon">❌</span> You're looking for a magic pill that works overnight without any lifestyle changes.</li>
+        <li><span class="x-icon">❌</span> You're unwilling to take 2 capsules daily with food for at least 30 days.</li>
+        <li><span class="x-icon">❌</span> You want the cheapest option regardless of quality or bioavailability.</li>
+        <li><span class="x-icon">❌</span> You're currently on blood thinners and haven't talked to your doctor.</li>
+        <li><span class="x-icon">❌</span> You expect a single ingredient to fix a multi-system problem.</li>
+      </ul>
+
+      <p class="reveal" style="text-align:center;margin-top:20px;font-size:14px;color:#16A34A;font-weight:600;">
+        But if you're ready for a smarter, science-backed approach... keep reading.
       </p>
-
-      <!-- VS Visual -->
-      <div class="flex items-center justify-center gap-4 sm:gap-8 mb-8 reveal">
-        <!-- Product image -->
-        <div class="flex-shrink-0">
-          <!-- IMAGE NEEDED: Inflammation Pro product bottle/pouch, clean white/teal background, hero shot, 300x400px -->
-          <div class="w-32 h-44 sm:w-44 sm:h-56 bg-warmgray-100 border-2 border-teal-600 rounded-lg flex items-center justify-center text-teal-700 text-xs text-center p-2">
-            [Inflammation Pro Product Image]
-          </div>
-        </div>
-
-        <!-- VS Badge -->
-        <div class="vs-badge w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center font-serif font-black text-xl sm:text-2xl flex-shrink-0 shadow-lg">
-          VS
-        </div>
-
-        <!-- Generic supplements -->
-        <div class="flex-shrink-0">
-          <!-- IMAGE NEEDED: Generic supplement bottles (glucosamine, fish oil, turmeric pills), scattered/messy look, 300x400px -->
-          <div class="w-32 h-44 sm:w-44 sm:h-56 bg-warmgray-100 border-2 border-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-xs text-center p-2">
-            [Generic Supplement Bottles]
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!-- SOCIAL PROOF COUNTER     -->
-  <!-- ======================== -->
-  <section class="py-6 px-4 bg-warmgray-100 text-center">
-    <p class="text-lg sm:text-xl font-semibold text-teal-800 reveal">
-      <span id="counter" class="font-serif font-black text-2xl sm:text-3xl">37,000+</span> Women Trust Goodness Lover
-    </p>
-  </section>
+  <!-- COMPARISON TABLE -->
+  <section class="section comparison-section">
+    <div class="container">
+      <h2 class="section-title reveal" style="color:#fff;">What's In Your Inflammation Supplement?</h2>
+      <p class="section-subtitle reveal" style="color:rgba(255,255,255,0.5);">Not all "premium" inflammation formulas are made equal. Here's what's actually in them.</p>
 
-  <!-- ======================== -->
-  <!-- SCROLLING REVIEWS MARQUEE -->
-  <!-- ======================== -->
-  <section class="py-6 bg-white overflow-hidden border-y border-warmgray-200">
-    <div class="flex marquee-track" aria-hidden="true">
-      <div class="flex gap-8 flex-shrink-0 px-4">
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"Finally something that actually works" - <strong>Bonny J.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"My joint stiffness is so much better" - <strong>Jean S.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"I can walk up stairs without pain again" - <strong>Leia A.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"Worth every penny, no more ibuprofen" - <strong>Fred P.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"I feel like myself again after 3 weeks" - <strong>Mary L.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"My naturopath recommended this, so glad" - <strong>Valerie M.</strong></span>
-        </div>
-      </div>
-      <div class="flex gap-8 flex-shrink-0 px-4" aria-hidden="true">
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"Finally something that actually works" - <strong>Bonny J.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"My joint stiffness is so much better" - <strong>Jean S.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"I can walk up stairs without pain again" - <strong>Leia A.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"Worth every penny, no more ibuprofen" - <strong>Fred P.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"I feel like myself again after 3 weeks" - <strong>Mary L.</strong></span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600 whitespace-nowrap">
-          <span class="text-yellow-500">★★★★★</span>
-          <span>"My naturopath recommended this, so glad" - <strong>Valerie M.</strong></span>
-        </div>
-      </div>
-    </div>
-    <p class="text-center text-xs text-gray-400 mt-2">Individual results may vary.</p>
-  </section>
-
-  <!-- ======================== -->
-  <!-- RISK-FREE CTA #1         -->
-  <!-- ======================== -->
-  <section class="py-10 px-4 bg-cream text-center" id="cta-section-1">
-    <div class="max-w-2xl mx-auto reveal">
-      <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn inline-block text-white font-bold text-lg sm:text-xl py-4 px-10 rounded-full uppercase tracking-wide">
-        Try Inflammation Pro Risk-Free
-      </a>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 mt-4 text-xs text-gray-500">
-        <!-- IMAGE NEEDED: Trust badge - "3rd Party Tested" shield icon, 40x40px -->
-        <span class="flex items-center gap-1"><span class="inline-block w-4 h-4 bg-teal-600 rounded-full"></span> 3rd Party Tested</span>
-        <!-- IMAGE NEEDED: Trust badge - "GMP Certified" seal icon, 40x40px -->
-        <span class="flex items-center gap-1"><span class="inline-block w-4 h-4 bg-teal-600 rounded-full"></span> GMP Certified</span>
-        <!-- IMAGE NEEDED: Trust badge - "365-Day Guarantee" badge icon, 40x40px -->
-        <span class="flex items-center gap-1"><span class="inline-block w-4 h-4 bg-teal-600 rounded-full"></span> 365-Day Guarantee</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== -->
-  <!-- COMPARISON TABLE          -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-center text-gray-900 mb-3 reveal">
-        What's In Your Inflammation Supplement?
-      </h2>
-      <p class="text-center text-gray-600 mb-8 text-sm sm:text-base max-w-xl mx-auto reveal">
-        Not all "premium" inflammation formulas are made equal. Here's what's actually in them.
-      </p>
-
-      <div class="overflow-x-auto reveal">
-        <table class="w-full text-left border-collapse">
+      <div class="table-scroll reveal">
+        <table class="comparison-table">
           <thead>
-            <tr class="border-b-2 border-gray-200">
-              <th class="py-3 px-4 text-sm font-semibold text-gray-500 w-2/5"></th>
-              <th class="py-3 px-4 text-center w-[30%]">
-                <div class="bg-teal-600 text-white rounded-lg py-2 px-3 font-bold text-sm">Inflammation Pro</div>
+            <tr>
+              <th></th>
+              <th class="col-us" style="border-radius:8px 8px 0 0;">
+                <div style="background:var(--teal);color:#fff;padding:8px 12px;border-radius:8px;font-size:14px;">Inflammation Pro</div>
               </th>
-              <th class="py-3 px-4 text-center text-gray-500 text-sm w-[30%]">Generic Supplements</th>
+              <th class="col-them">Generic Supplements</th>
             </tr>
           </thead>
-          <tbody class="text-sm sm:text-base">
-            <tr class="border-b border-warmgray-200">
-              <td class="py-3 px-4 font-semibold text-gray-700">Approach</td>
-              <td class="py-3 px-4 text-center"><span class="check font-bold text-lg">✓</span><br>3-Phase System (Soothe, Repair, Protect)</td>
-              <td class="py-3 px-4 text-center text-gray-400">Single-ingredient, isolated compounds</td>
-            </tr>
-            <tr class="border-b border-warmgray-200 bg-warmgray-100/50">
-              <td class="py-3 px-4 font-semibold text-gray-700">Anti-Inflammatory</td>
-              <td class="py-3 px-4 text-center"><span class="check font-bold text-lg">✓</span><br>Meriva Curcumin (29x absorption)</td>
-              <td class="py-3 px-4 text-center text-gray-400">Generic turmeric (~1% bioavailability)</td>
-            </tr>
-            <tr class="border-b border-warmgray-200">
-              <td class="py-3 px-4 font-semibold text-gray-700">Joint Soothing</td>
-              <td class="py-3 px-4 text-center"><span class="check font-bold text-lg">✓</span><br>White Willow Bark (natural salicin)</td>
-              <td class="py-3 px-4 text-center text-gray-400">Glucosamine (one building block only)</td>
-            </tr>
-            <tr class="border-b border-warmgray-200 bg-warmgray-100/50">
-              <td class="py-3 px-4 font-semibold text-gray-700">Gut-Joint Connection</td>
-              <td class="py-3 px-4 text-center"><span class="check font-bold text-lg">✓</span><br>PepZin GI + LP299V Probiotic</td>
-              <td class="py-3 px-4 text-center"><span class="xmark font-bold text-lg">✗</span><br>Not addressed</td>
-            </tr>
-            <tr class="border-b border-warmgray-200">
-              <td class="py-3 px-4 font-semibold text-gray-700">Absorption Tech</td>
-              <td class="py-3 px-4 text-center"><span class="check font-bold text-lg">✓</span><br>CurcuWIN (up to 46x increase)</td>
-              <td class="py-3 px-4 text-center"><span class="xmark font-bold text-lg">✗</span><br>No enhancement</td>
-            </tr>
-            <tr class="border-b border-warmgray-200 bg-warmgray-100/50">
-              <td class="py-3 px-4 font-semibold text-gray-700">Total Active Compounds</td>
-              <td class="py-3 px-4 text-center font-bold text-teal-700">4 targeted, synergistic</td>
-              <td class="py-3 px-4 text-center text-gray-400">1-2, non-synergistic</td>
+          <tbody>
+            <tr>
+              <td>Approach</td>
+              <td class="col-us"><span class="check">✓</span><br>3-Phase System</td>
+              <td class="col-them">Single-ingredient, isolated</td>
             </tr>
             <tr>
-              <td class="py-3 px-4 font-semibold text-gray-700">What's Reaching Your Joints</td>
-              <td class="py-3 px-4 text-center font-semibold text-teal-700">Everything, engineered for absorption</td>
-              <td class="py-3 px-4 text-center text-gray-400">Only what your body absorbs on its own</td>
+              <td>Anti-Inflammatory</td>
+              <td class="col-us"><span class="check">✓</span><br>Meriva Curcumin (29x absorption)</td>
+              <td class="col-them">Generic turmeric (~1% bioavailability)</td>
+            </tr>
+            <tr>
+              <td>Joint Soothing</td>
+              <td class="col-us"><span class="check">✓</span><br>White Willow Bark</td>
+              <td class="col-them">Glucosamine (one building block)</td>
+            </tr>
+            <tr>
+              <td>Gut-Joint Connection</td>
+              <td class="col-us"><span class="check">✓</span><br>PepZin GI + LP299V</td>
+              <td class="col-them"><span class="xmark">✗</span><br>Not addressed</td>
+            </tr>
+            <tr>
+              <td>Absorption Tech</td>
+              <td class="col-us"><span class="check">✓</span><br>CurcuWIN (46x increase)</td>
+              <td class="col-them"><span class="xmark">✗</span><br>No enhancement</td>
+            </tr>
+            <tr>
+              <td>Total Active Compounds</td>
+              <td class="col-us" style="font-weight:700;color:#34D399;">4 targeted, synergistic</td>
+              <td class="col-them">1-2, non-synergistic</td>
+            </tr>
+            <tr>
+              <td>What Reaches Your Joints</td>
+              <td class="col-us" style="font-weight:700;color:#34D399;">Everything, engineered for absorption</td>
+              <td class="col-them">Only what your body absorbs on its own</td>
             </tr>
           </tbody>
         </table>
@@ -340,488 +682,512 @@
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!-- WHY THAT MATTERS         -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-warmgray-100">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-center text-gray-900 mb-3 reveal">
-        Here's Why That Matters
-      </h2>
-      <p class="text-center text-gray-600 mb-10 text-sm sm:text-base max-w-xl mx-auto reveal">
-        Your body needs four systems working together to manage inflammation. Every product you've tried addresses one. Maybe.
-      </p>
+  <!-- WHY THAT MATTERS -->
+  <section class="section" style="background:var(--warmgray-100);">
+    <div class="container">
+      <h2 class="section-title reveal">Here's Why That Matters</h2>
+      <p class="section-subtitle reveal">Your body needs four systems working together. Every product you've tried addresses one. Maybe.</p>
 
-      <!-- Reason 1: Generic Turmeric -->
-      <div class="bg-white rounded-xl p-6 sm:p-8 mb-6 shadow-sm reveal">
-        <div class="flex flex-col sm:flex-row gap-6 items-start">
-          <div class="flex-shrink-0">
-            <!-- IMAGE NEEDED: Turmeric root and generic turmeric capsules side by side, warm lighting, 120x120px -->
-            <div class="w-24 h-24 bg-warmgray-100 rounded-lg flex items-center justify-center text-gray-400 text-xs text-center">[Turmeric Image]</div>
-          </div>
+      <div class="why-card reveal">
+        <div class="why-card-inner">
+          <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=200&h=200&fit=crop" alt="Turmeric root" class="why-card-img" loading="lazy">
           <div>
-            <h3 class="font-serif font-bold text-lg text-gray-900 mb-2">The Turmeric Bioavailability Problem</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-3">
-              Generic turmeric has roughly 1% bioavailability. That means 99% of what you swallow passes through unabsorbed. You're not taking turmeric. You're renting it.
-            </p>
-            <p class="text-teal-700 font-semibold text-sm">Inflammation Pro uses Meriva Curcumin with 29x better absorption.</p>
+            <h3>The Turmeric Bioavailability Problem</h3>
+            <p>Generic turmeric has roughly 1% bioavailability. That means 99% of what you swallow passes through unabsorbed. You're not taking turmeric. You're renting it.</p>
+            <p class="takeaway">Inflammation Pro uses Meriva Curcumin with 29x better absorption.</p>
           </div>
         </div>
       </div>
 
-      <!-- Reason 2: Glucosamine Failure -->
-      <div class="bg-white rounded-xl p-6 sm:p-8 mb-6 shadow-sm reveal">
-        <div class="flex flex-col sm:flex-row gap-6 items-start">
-          <div class="flex-shrink-0">
-            <!-- IMAGE NEEDED: Single glucosamine bottle looking outdated/dusty, 120x120px -->
-            <div class="w-24 h-24 bg-warmgray-100 rounded-lg flex items-center justify-center text-gray-400 text-xs text-center">[Glucosamine Image]</div>
-          </div>
+      <div class="why-card reveal">
+        <div class="why-card-inner">
+          <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=200&h=200&fit=crop" alt="Supplement capsules" class="why-card-img" loading="lazy">
           <div>
-            <h3 class="font-serif font-bold text-lg text-gray-900 mb-2">The Glucosamine Limitation</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-3">
-              Glucosamine provides a single structural building block. That's it. No inflammation control. No gut support. No absorption enhancement. One input for a four-part system.
-            </p>
-            <p class="text-teal-700 font-semibold text-sm">Inflammation Pro works on all four systems simultaneously.</p>
+            <h3>The Glucosamine Limitation</h3>
+            <p>Glucosamine provides a single structural building block. That's it. No inflammation control. No gut support. No absorption enhancement. One input for a four-part system.</p>
+            <p class="takeaway">Inflammation Pro works on all four systems simultaneously.</p>
           </div>
         </div>
       </div>
 
-      <!-- Reason 3: NSAID Problem -->
-      <div class="bg-white rounded-xl p-6 sm:p-8 mb-6 shadow-sm reveal">
-        <div class="flex flex-col sm:flex-row gap-6 items-start">
-          <div class="flex-shrink-0">
-            <!-- IMAGE NEEDED: Ibuprofen/NSAID bottle with warning label visible, somber mood, 120x120px -->
-            <div class="w-24 h-24 bg-warmgray-100 rounded-lg flex items-center justify-center text-gray-400 text-xs text-center">[NSAID Image]</div>
-          </div>
+      <div class="why-card reveal">
+        <div class="why-card-inner">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop" alt="Pain medication" class="why-card-img" loading="lazy">
           <div>
-            <h3 class="font-serif font-bold text-lg text-gray-900 mb-2">The NSAID Mask</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-3">
-              NSAIDs mask pain. The inflammation and tissue degradation continue underneath. Some research suggests long-term use may actually accelerate joint breakdown.
-            </p>
-            <p class="text-teal-700 font-semibold text-sm">Inflammation Pro addresses root causes, not just symptoms.</p>
+            <h3>The NSAID Mask</h3>
+            <p>NSAIDs mask pain. The inflammation and tissue degradation continue underneath. Some research suggests long-term use may actually accelerate joint breakdown.</p>
+            <p class="takeaway">Inflammation Pro addresses root causes, not just symptoms.</p>
           </div>
         </div>
       </div>
 
-      <!-- Reason 4: Gut-Joint Connection -->
-      <div class="bg-white rounded-xl p-6 sm:p-8 shadow-sm reveal">
-        <div class="flex flex-col sm:flex-row gap-6 items-start">
-          <div class="flex-shrink-0">
-            <!-- IMAGE NEEDED: Illustration of gut-joint axis, intestines connected to joints via bloodstream, 120x120px -->
-            <div class="w-24 h-24 bg-warmgray-100 rounded-lg flex items-center justify-center text-gray-400 text-xs text-center">[Gut-Joint Diagram]</div>
-          </div>
+      <div class="why-card reveal">
+        <div class="why-card-inner">
+          <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=200&h=200&fit=crop" alt="Digestive health" class="why-card-img" loading="lazy">
           <div>
-            <h3 class="font-serif font-bold text-lg text-gray-900 mb-2">The Missing Connection</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-3">
-              Your gut and joints are connected through systemic inflammation. An unhealthy gut lining allows inflammatory markers to circulate freely, targeting your joints. No other supplement addresses this.
-            </p>
-            <p class="text-teal-700 font-semibold text-sm">Inflammation Pro's Phase 3 Protect seals the gut lining with PepZin GI and LP299V probiotic.</p>
+            <h3>The Missing Connection</h3>
+            <p>Your gut and joints are connected through systemic inflammation. An unhealthy gut lining allows inflammatory markers to circulate freely. No other supplement addresses this.</p>
+            <p class="takeaway">Inflammation Pro's Phase 3 Protect seals the gut lining with PepZin GI and LP299V probiotic.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!-- 3-PHASE SOLUTION          -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-center text-gray-900 mb-3 reveal">
-        The 3-Phase System
-      </h2>
-      <p class="text-center text-gray-600 mb-10 text-sm sm:text-base max-w-xl mx-auto reveal">
-        Most supplements throw one ingredient at the problem. Inflammation Pro works in three synergistic phases.
-      </p>
+  <!-- 3-PHASE SYSTEM -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <h2 class="section-title reveal">The 3-Phase System</h2>
+      <p class="section-subtitle reveal">Most supplements throw one ingredient at the problem. Inflammation Pro works in three synergistic phases.</p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <!-- Phase 1 -->
-        <div class="bg-warmgray-100 rounded-xl p-6 text-center reveal">
-          <div class="w-14 h-14 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-serif font-bold text-lg">1</div>
-          <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Soothe</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            <strong class="text-teal-700">White Willow Bark</strong> provides natural salicin to calm acute inflammation and ease joint discomfort fast.
-          </p>
+      <div class="phase-grid">
+        <div class="phase-card reveal">
+          <div class="phase-num">1</div>
+          <h3>Soothe</h3>
+          <p><strong style="color:var(--teal);">White Willow Bark</strong> provides natural salicin to calm acute inflammation and ease joint discomfort fast.</p>
         </div>
-
-        <!-- Phase 2 -->
-        <div class="bg-warmgray-100 rounded-xl p-6 text-center reveal">
-          <div class="w-14 h-14 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-serif font-bold text-lg">2</div>
-          <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Repair</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            <strong class="text-teal-700">Meriva Curcumin</strong> with 29x bioavailability delivers deep anti-inflammatory support where your body needs it most.
-          </p>
+        <div class="phase-card reveal">
+          <div class="phase-num">2</div>
+          <h3>Repair</h3>
+          <p><strong style="color:var(--teal);">Meriva Curcumin</strong> with 29x bioavailability delivers deep anti-inflammatory support where your body needs it most.</p>
         </div>
-
-        <!-- Phase 3 -->
-        <div class="bg-warmgray-100 rounded-xl p-6 text-center reveal">
-          <div class="w-14 h-14 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-serif font-bold text-lg">3</div>
-          <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Protect</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            <strong class="text-teal-700">PepZin GI + LP299V</strong> seal the gut lining, breaking the gut-inflammation cycle that keeps your joints inflamed.
-          </p>
+        <div class="phase-card reveal">
+          <div class="phase-num">3</div>
+          <h3>Protect</h3>
+          <p><strong style="color:var(--teal);">PepZin GI + LP299V</strong> seal the gut lining, breaking the gut-inflammation cycle that keeps your joints inflamed.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!-- LIFESTYLE IMAGE BREAK    -->
-  <!-- ======================== -->
-  <section class="py-0">
-    <!-- IMAGE NEEDED: Lifestyle photo - woman 40s-50s, active outdoors (walking, gardening, or yoga), warm natural lighting, authentic smile, teal color accents, 1200x400px banner -->
-    <div class="w-full h-48 sm:h-64 bg-warmgray-200 flex items-center justify-center text-gray-400 text-sm">
-      [Lifestyle Banner: Active woman, 40s-50s, outdoors, warm lighting, authentic]
+  <!-- LIFESTYLE BANNER -->
+  <div>
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=400&fit=crop&crop=center" alt="Active woman enjoying outdoor life" class="lifestyle-banner" loading="lazy">
+  </div>
+
+  <!-- FOUNDER STORY -->
+  <section class="section founder-section">
+    <div class="container-narrow">
+      <div class="founder-header reveal">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face" alt="Sarah Otto, Founder" class="founder-photo" loading="lazy">
+        <div>
+          <p class="founder-title">Founder of Goodness Lover</p>
+          <p class="founder-name">Hey, I'm Sarah!</p>
+        </div>
+      </div>
+
+      <p class="founder-text reveal">
+        I know what it's like to wake up every morning feeling like your body is working against you. The stiffness in your joints that takes an hour to shake off. The fatigue that no amount of coffee can fix. The frustration of being told "your labs look fine" when you feel anything but.
+      </p>
+
+      <ul class="pain-list reveal">
+        <li><span class="cross">❌</span> Chronic joint stiffness that made mornings miserable</li>
+        <li><span class="cross">❌</span> Inflammation that flared up without warning</li>
+        <li><span class="cross">❌</span> Hormone imbalances that no one could explain</li>
+        <li><span class="cross">❌</span> Low energy that stole my productivity and joy</li>
+      </ul>
+
+      <p class="founder-text reveal">
+        I spent years trying everything. Every supplement, every diet, every "miracle cure" that showed up in my feed. Sound familiar?
+      </p>
+
+      <div class="founder-turning reveal">
+        Then... everything turned around for me when I discovered the gut-inflammation connection.
+      </div>
+
+      <p class="founder-text reveal">
+        I learned that inflammation isn't just one thing. It's a cascade of connected systems, and if you only address one, you're fighting a losing battle. That's why I worked with researchers to develop a 3-phase approach that actually works.
+      </p>
+
+      <p class="founder-text reveal" style="font-weight:600;color:var(--slate);">
+        Not fun (and yes, I tried it all myself):
+      </p>
+
+      <div class="tried-grid reveal">
+        <div class="tried-item"><span class="dash">-</span> Low Carb</div>
+        <div class="tried-item"><span class="dash">-</span> Plant Based</div>
+        <div class="tried-item"><span class="dash">-</span> Green Juice</div>
+        <div class="tried-item"><span class="dash">-</span> Keto</div>
+        <div class="tried-item"><span class="dash">-</span> Paleo</div>
+        <div class="tried-item"><span class="dash">-</span> Probiotics</div>
+        <div class="tried-item"><span class="dash">-</span> Turmeric Pills</div>
+        <div class="tried-item"><span class="dash">-</span> Fish Oil</div>
+        <div class="tried-item"><span class="dash">-</span> Glucosamine</div>
+      </div>
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!-- PRICING + GUARANTEE      -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-white" id="pricing">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-gray-900 mb-3 reveal">
-        Try Inflammation Pro Today
-      </h2>
-      <p class="text-gray-600 mb-8 text-sm sm:text-base max-w-lg mx-auto reveal">
-        Join 37,000+ women who chose a smarter approach to inflammation support.
-      </p>
+  <!-- SCARCITY BAR -->
+  <div class="scarcity-bar pulse">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2" style="vertical-align:middle;margin-right:4px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    Due to high demand, Inflammation Pro has a high risk of selling out. Order now to secure your supply.
+  </div>
 
-      <div class="bg-warmgray-100 rounded-2xl p-6 sm:p-10 mb-6 shadow-sm reveal">
-        <!-- IMAGE NEEDED: Inflammation Pro 3-bottle bundle pack shot, front-facing, clean background, 200x200px -->
-        <div class="w-36 h-36 bg-white rounded-xl mx-auto mb-4 flex items-center justify-center text-gray-400 text-xs">[3-Bottle Pack Image]</div>
-        <p class="font-serif font-bold text-xl text-gray-900 mb-1">3-Bottle Bundle</p>
-        <p class="text-gray-500 text-sm mb-3">90-Day Supply - Best Value</p>
-        <div class="flex items-center justify-center gap-3 mb-1">
-          <span class="text-gray-400 line-through text-lg">$152.85</span>
-          <span class="font-serif font-black text-3xl text-teal-700">$125.90</span>
+  <!-- PRICING -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Choose Your Supply</h2>
+      <p class="section-subtitle reveal">Join 37,000+ women who chose a smarter approach to inflammation support.</p>
+
+      <div class="pricing-options reveal">
+        <!-- 1 Bottle -->
+        <div class="pricing-option" onclick="selectPricing(this, 'single')">
+          <p class="pricing-name">1 Bottle</p>
+          <p class="pricing-supply">30-Day Supply</p>
+          <div class="pricing-price">
+            <span class="pricing-original">$50.95</span>
+            <span class="pricing-current">$41.97</span>
+          </div>
+          <p class="pricing-perday">$1.40/day</p>
+          <div class="pricing-radio"><div class="pricing-radio-dot"></div> Select</div>
         </div>
-        <p class="text-sm text-gray-500 mb-4">That's just $1.40/day</p>
 
-        <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn inline-block text-white font-bold text-lg py-4 px-10 rounded-full uppercase tracking-wide w-full sm:w-auto">
-          Try Inflammation Pro Risk-Free
+        <!-- 3 Bottles -->
+        <div class="pricing-option selected" onclick="selectPricing(this, 'bundle')">
+          <div class="pricing-badge">Best Value</div>
+          <p class="pricing-name">3 Bottles</p>
+          <p class="pricing-supply">90-Day Supply</p>
+          <div class="pricing-price">
+            <span class="pricing-original">$152.85</span>
+            <span class="pricing-current">$125.90</span>
+          </div>
+          <p class="pricing-perday">$1.40/day</p>
+          <p class="pricing-savings">Save $26.95</p>
+          <div class="pricing-radio"><div class="pricing-radio-dot"></div> Select</div>
+        </div>
+
+        <!-- 6 Bottles -->
+        <div class="pricing-option" onclick="selectPricing(this, 'max')">
+          <p class="pricing-name">6 Bottles</p>
+          <p class="pricing-supply">180-Day Supply</p>
+          <div class="pricing-price">
+            <span class="pricing-original">$305.70</span>
+            <span class="pricing-current">$239.80</span>
+          </div>
+          <p class="pricing-perday">$1.33/day</p>
+          <p class="pricing-savings">Save $65.90</p>
+          <div class="pricing-radio"><div class="pricing-radio-dot"></div> Select</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:32px;">
+        <div class="cta-corner-wrap reveal">
+          <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" id="main-cta" class="cta-btn cta-btn-full" style="max-width:400px;">
+            <svg class="crown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg>
+            TRY INFLAMMATION PRO RISK-FREE
+          </a>
+        </div>
+
+        <div class="trust-badges reveal" style="margin-top:16px;">
+          <div class="trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            365-Day Guarantee
+          </div>
+          <div class="trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Free Shipping
+          </div>
+        </div>
+
+        <p class="reveal" style="font-size:13px;color:var(--slate-lighter);margin-top:12px;max-width:400px;margin-left:auto;margin-right:auto;">
+          Try it for 365 days. If your joints don't feel different, simply send us an email for a full refund. No risk.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISK REVERSAL: WORST / BEST CASE -->
+  <section class="section risk-section">
+    <div class="container">
+      <h2 class="section-title reveal">What's The Worst That Could Happen?</h2>
+      <p class="section-subtitle reveal">Let's be real about the risk... and the reward.</p>
+
+      <div class="risk-grid">
+        <div class="risk-card worst reveal">
+          <h3>Worst Case Scenario</h3>
+          <p>You try Inflammation Pro for 30-90 days. It doesn't work for you. You email us. You get a full refund. You're exactly where you are now, minus nothing. You keep the bottles.</p>
+          <p style="margin-top:12px;font-weight:700;color:#DC2626;">Risk: $0</p>
+        </div>
+        <div class="risk-card best reveal">
+          <h3>Best Case Scenario</h3>
+          <p>You wake up without that morning stiffness. You climb stairs without thinking about it. You stop planning your day around your pain. You get your life back.</p>
+          <p style="margin-top:12px;font-weight:700;color:#16A34A;">Reward: Your life, unrestricted.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO TAKE IT -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <h2 class="section-title reveal">How To Take Inflammation Pro</h2>
+      <div class="phase-grid" style="margin-top:24px;">
+        <div class="phase-card reveal">
+          <div class="phase-num" style="font-size:16px;">🕐</div>
+          <h3>When</h3>
+          <p>Take 2 capsules daily, ideally in the morning with breakfast.</p>
+        </div>
+        <div class="phase-card reveal">
+          <div class="phase-num" style="font-size:16px;">🍽</div>
+          <h3>With Food</h3>
+          <p>Always take with a meal to maximize curcumin absorption.</p>
+        </div>
+        <div class="phase-card reveal">
+          <div class="phase-num" style="font-size:16px;">↺</div>
+          <h3>Consistency</h3>
+          <p>Give it 30 days. The 3-phase system builds over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" style="background:var(--warmgray-100);">
+    <div class="container">
+      <h2 class="section-title reveal">What Women Are Saying</h2>
+      <p class="section-subtitle reveal">Real results from real women.</p>
+
+      <div style="display:grid;grid-template-columns:1fr;gap:16px;" class="reveal">
+        <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+          <div style="color:#F59E0B;margin-bottom:8px;">★★★★★</div>
+          <p style="font-size:14px;color:var(--slate-light);line-height:1.6;margin-bottom:8px;">"I've tried everything for my joint pain. Glucosamine, fish oil, turmeric pills... nothing worked until Inflammation Pro. After 3 weeks, I could feel the difference getting out of bed."</p>
+          <p style="font-weight:700;font-size:14px;color:var(--slate);">- Bonny J.</p>
+        </div>
+        <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+          <div style="color:#F59E0B;margin-bottom:8px;">★★★★★</div>
+          <p style="font-size:14px;color:var(--slate-light);line-height:1.6;margin-bottom:8px;">"My naturopath recommended this and I'm so glad she did. The 3-phase approach makes so much sense. My joint stiffness is significantly better."</p>
+          <p style="font-weight:700;font-size:14px;color:var(--slate);">- Jean S.</p>
+        </div>
+        <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+          <div style="color:#F59E0B;margin-bottom:8px;">★★★★★</div>
+          <p style="font-size:14px;color:var(--slate-light);line-height:1.6;margin-bottom:8px;">"I can walk up stairs without pain again. I didn't realize how much I'd been avoiding until I started feeling better. This product gave me my active life back."</p>
+          <p style="font-weight:700;font-size:14px;color:var(--slate);">- Leia A.</p>
+        </div>
+        <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+          <div style="color:#F59E0B;margin-bottom:8px;">★★★★★</div>
+          <p style="font-size:14px;color:var(--slate-light);line-height:1.6;margin-bottom:8px;">"Worth every penny. I was taking ibuprofen daily and now I rarely need it. The gut support is what sold me - no other supplement does that."</p>
+          <p style="font-weight:700;font-size:14px;color:var(--slate);">- Fred P.</p>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:11px;color:var(--slate-lighter);margin-top:12px;">Individual results may vary.</p>
+    </div>
+  </section>
+
+  <!-- MID-PAGE CTA -->
+  <section class="section-sm" style="background:#fff;text-align:center;">
+    <div class="container-narrow reveal">
+      <div class="cta-corner-wrap">
+        <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn">
+          <svg class="crown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg>
+          TRY INFLAMMATION PRO RISK-FREE
         </a>
+      </div>
+      <p style="font-size:13px;color:var(--slate-lighter);margin-top:12px;">365-day money-back guarantee. No questions asked.</p>
+    </div>
+  </section>
 
-        <div class="flex items-center justify-center gap-2 mt-4 text-xs text-gray-500">
-          <!-- IMAGE NEEDED: 365-day money-back guarantee badge/seal, 24x24px -->
-          <span class="inline-block w-4 h-4 bg-teal-600 rounded-full"></span>
-          <span>365-Day Money-Back Guarantee</span>
+  <!-- FAQ (DARK) -->
+  <section class="section faq-dark" id="faq">
+    <div class="container-narrow">
+      <h2 class="section-title reveal" style="color:#fff;">Frequently Asked Questions</h2>
+      <p class="section-subtitle reveal" style="color:rgba(255,255,255,0.5);">Everything you need to know.</p>
+
+      <div class="faq-block reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What makes Inflammation Pro different?</span>
+          <span class="faq-chevron">⌄</span>
         </div>
+        <div class="faq-a"><div class="faq-a-inner">Most supplements use a single ingredient with poor absorption. Inflammation Pro uses a 3-phase system: White Willow Bark to soothe, Meriva Curcumin (29x absorption) to repair, and PepZin GI + LP299V probiotic to protect the gut-joint connection. It's the only supplement that addresses all four systems involved in inflammation.</div></div>
       </div>
 
-      <p class="text-sm text-gray-500 reveal">
-        Try it for 365 days. If your joints don't feel different, simply send us an email for a full refund. No risk.
-      </p>
-    </div>
-  </section>
-
-  <!-- ======================== -->
-  <!-- SCARCITY NOTE             -->
-  <!-- ======================== -->
-  <section class="py-6 px-4 bg-warmgray-100">
-    <div class="max-w-2xl mx-auto text-center">
-      <p class="text-sm text-gray-700 font-semibold pulse-scarcity reveal">
-        <!-- IMAGE NEEDED: Warning/alert icon (triangle exclamation), 16x16px -->
-        <span class="inline-block w-4 h-4 bg-yellow-400 rounded mr-1 align-middle"></span>
-        Due to high demand, Inflammation Pro has a high risk of selling out. Order now to secure your supply.
-      </p>
-    </div>
-  </section>
-
-  <!-- ======================== -->
-  <!-- HOW TO TAKE IT           -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-center text-gray-900 mb-8 reveal">
-        How To Take Inflammation Pro
-      </h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="text-center reveal">
-          <div class="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">?</div>
-          <h3 class="font-bold text-gray-900 mb-1">When</h3>
-          <p class="text-sm text-gray-600">Take 2 capsules daily, ideally in the morning with breakfast.</p>
+      <div class="faq-block reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How long does it take to feel results?</span>
+          <span class="faq-chevron">⌄</span>
         </div>
-        <div class="text-center reveal">
-          <div class="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">🍴</div>
-          <h3 class="font-bold text-gray-900 mb-1">With Food</h3>
-          <p class="text-sm text-gray-600">Always take with a meal to maximize curcumin absorption.</p>
+        <div class="faq-a"><div class="faq-a-inner">Many women report feeling initial relief within 1-2 weeks from White Willow Bark (Phase 1). The deeper repair and protection benefits build over 30-90 days. We recommend at least 30 days for the full 3-phase system to work.</div></div>
+      </div>
+
+      <div class="faq-block reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is it safe with my medications?</span>
+          <span class="faq-chevron">⌄</span>
         </div>
-        <div class="text-center reveal">
-          <div class="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">↺</div>
-          <h3 class="font-bold text-gray-900 mb-1">Consistency</h3>
-          <p class="text-sm text-gray-600">Give it 30 days. The 3-phase system builds over time.</p>
+        <div class="faq-a"><div class="faq-a-inner">Inflammation Pro is made with natural, clinically studied ingredients. However, we always recommend consulting your healthcare provider before starting any new supplement, especially if you're on blood thinners, have a medical condition, or are pregnant or nursing.</div></div>
+      </div>
+
+      <div class="faq-block reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What is your guarantee?</span>
+          <span class="faq-chevron">⌄</span>
         </div>
+        <div class="faq-a"><div class="faq-a-inner">We offer a 365-day money-back guarantee. That's an entire year. If you're not satisfied for any reason, simply email our support team for a full refund. No questions asked. We're that confident in Inflammation Pro.</div></div>
+      </div>
+
+      <div class="faq-block reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What are the ingredients?</span>
+          <span class="faq-chevron">⌄</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Inflammation Pro contains: White Willow Bark (natural salicin), Meriva Curcumin Phytosome (29x bioavailability), PepZin GI Zinc-Carnosine (gut lining support), LP299V Probiotic (gut barrier function), and CurcuWIN absorption technology. All ingredients are 3rd party tested and manufactured in a GMP-certified facility.</div></div>
+      </div>
+
+      <div class="faq-block reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How do I take it?</span>
+          <span class="faq-chevron">⌄</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Take 2 capsules daily with a meal, ideally breakfast. Consistency is key - the 3-phase system builds over time. Give it at least 30 days for the full effect.</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!-- TESTIMONIALS              -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-warmgray-100">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-center text-gray-900 mb-8 reveal">
-        What Women Are Saying
-      </h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm reveal">
-          <div class="text-yellow-500 mb-2">★★★★★</div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-3">"I've tried everything for my joint pain. Glucosamine, fish oil, turmeric pills... nothing worked until Inflammation Pro. After 3 weeks, I could feel the difference getting out of bed."</p>
-          <p class="font-semibold text-gray-900 text-sm">- Bonny J.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm reveal">
-          <div class="text-yellow-500 mb-2">★★★★★</div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-3">"My naturopath recommended this and I'm so glad she did. The 3-phase approach makes so much sense. My joint stiffness is significantly better."</p>
-          <p class="font-semibold text-gray-900 text-sm">- Jean S.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm reveal">
-          <div class="text-yellow-500 mb-2">★★★★★</div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-3">"I can walk up stairs without pain again. I didn't realize how much I'd been avoiding until I started feeling better. This product gave me my active life back."</p>
-          <p class="font-semibold text-gray-900 text-sm">- Leia A.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm reveal">
-          <div class="text-yellow-500 mb-2">★★★★★</div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-3">"Worth every penny. I was taking ibuprofen daily and now I rarely need it. The gut support is what sold me - no other supplement does that."</p>
-          <p class="font-semibold text-gray-900 text-sm">- Fred P.</p>
-        </div>
+  <!-- FINAL CTA -->
+  <section class="section" style="background:#fff;text-align:center;">
+    <div class="container-narrow reveal">
+      <h2 style="font-size:28px;font-weight:900;color:var(--slate);margin-bottom:12px;">Ready To Try A Smarter Approach?</h2>
+      <p style="font-size:15px;color:var(--slate-light);margin-bottom:24px;">Join 37,000+ women who stopped settling for single-ingredient supplements.</p>
+      <div class="cta-corner-wrap">
+        <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn">
+          <svg class="crown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg>
+          TRY INFLAMMATION PRO RISK-FREE
+        </a>
       </div>
-      <p class="text-center text-xs text-gray-400 mt-4">Individual results may vary.</p>
-    </div>
-  </section>
+      <p style="font-size:13px;color:var(--slate-lighter);margin-top:12px;">365-day money-back guarantee</p>
 
-  <!-- ======================== -->
-  <!-- CTA #2 (MID-PAGE)        -->
-  <!-- ======================== -->
-  <section class="py-10 px-4 bg-white text-center">
-    <div class="max-w-2xl mx-auto reveal">
-      <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn inline-block text-white font-bold text-lg sm:text-xl py-4 px-10 rounded-full uppercase tracking-wide">
-        Try Inflammation Pro Risk-Free
-      </a>
-      <p class="text-sm text-gray-500 mt-3">365-day money-back guarantee. No questions asked.</p>
-    </div>
-  </section>
-
-  <!-- ======================== -->
-  <!-- FAQ ACCORDION            -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-warmgray-100" id="faq">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-center text-gray-900 mb-8 reveal">
-        Frequently Asked Questions
-      </h2>
-
-      <div class="space-y-3">
-        <div class="faq-item bg-white rounded-xl px-6 shadow-sm cursor-pointer reveal">
-          <div class="faq-question flex items-center justify-between py-4">
-            <span class="font-semibold text-gray-900 text-sm sm:text-base pr-4">What makes Inflammation Pro different from other joint supplements?</span>
-            <span class="faq-chevron text-teal-600 flex-shrink-0 text-xl font-bold">⌄</span>
-          </div>
-          <div class="faq-answer text-gray-600 text-sm leading-relaxed">
-            Most joint supplements use a single ingredient (usually glucosamine) with poor absorption. Inflammation Pro uses a 3-phase system: White Willow Bark to soothe, Meriva Curcumin (29x absorption) to repair, and PepZin GI + LP299V probiotic to protect the gut-joint connection. It's the only supplement that addresses all four systems involved in inflammation.
-          </div>
+      <div class="trust-badges" style="margin-top:16px;">
+        <div class="trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          3rd Party Tested
         </div>
-
-        <div class="faq-item bg-white rounded-xl px-6 shadow-sm cursor-pointer reveal">
-          <div class="faq-question flex items-center justify-between py-4">
-            <span class="font-semibold text-gray-900 text-sm sm:text-base pr-4">How long does it take to feel results?</span>
-            <span class="faq-chevron text-teal-600 flex-shrink-0 text-xl font-bold">⌄</span>
-          </div>
-          <div class="faq-answer text-gray-600 text-sm leading-relaxed">
-            Many women report feeling initial relief within the first 1-2 weeks from the White Willow Bark (Phase 1 Soothe). The deeper repair and protection benefits from curcumin and gut support compounds build over 30-90 days. We recommend giving it at least 30 days for the full 3-phase system to work.
-          </div>
+        <div class="trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          GMP Certified
         </div>
-
-        <div class="faq-item bg-white rounded-xl px-6 shadow-sm cursor-pointer reveal">
-          <div class="faq-question flex items-center justify-between py-4">
-            <span class="font-semibold text-gray-900 text-sm sm:text-base pr-4">Is it safe to take with my current medications?</span>
-            <span class="faq-chevron text-teal-600 flex-shrink-0 text-xl font-bold">⌄</span>
-          </div>
-          <div class="faq-answer text-gray-600 text-sm leading-relaxed">
-            Inflammation Pro is made with natural, clinically studied ingredients. However, we always recommend consulting with your healthcare provider before starting any new supplement, especially if you're on blood thinners, have a medical condition, or are pregnant or nursing.
-          </div>
-        </div>
-
-        <div class="faq-item bg-white rounded-xl px-6 shadow-sm cursor-pointer reveal">
-          <div class="faq-question flex items-center justify-between py-4">
-            <span class="font-semibold text-gray-900 text-sm sm:text-base pr-4">What is your guarantee?</span>
-            <span class="faq-chevron text-teal-600 flex-shrink-0 text-xl font-bold">⌄</span>
-          </div>
-          <div class="faq-answer text-gray-600 text-sm leading-relaxed">
-            We offer a 365-day money-back guarantee. That's an entire year. If you're not satisfied with your results for any reason, simply email our support team for a full refund. No questions asked, no hassle. We're that confident in Inflammation Pro.
-          </div>
-        </div>
-
-        <div class="faq-item bg-white rounded-xl px-6 shadow-sm cursor-pointer reveal">
-          <div class="faq-question flex items-center justify-between py-4">
-            <span class="font-semibold text-gray-900 text-sm sm:text-base pr-4">What are the ingredients?</span>
-            <span class="faq-chevron text-teal-600 flex-shrink-0 text-xl font-bold">⌄</span>
-          </div>
-          <div class="faq-answer text-gray-600 text-sm leading-relaxed">
-            Inflammation Pro contains: White Willow Bark (natural salicin source), Meriva Curcumin Phytosome (29x bioavailability vs standard curcumin), PepZin GI Zinc-Carnosine (gut lining support), LP299V Probiotic (gut barrier function), and CurcuWIN absorption technology. All ingredients are 3rd party tested and manufactured in a GMP-certified facility.
-          </div>
+        <div class="trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Made in USA
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================== -->
-  <!-- FINAL CTA                -->
-  <!-- ======================== -->
-  <section class="py-12 sm:py-16 px-4 bg-white text-center">
-    <div class="max-w-2xl mx-auto reveal">
-      <h2 class="font-serif font-black text-2xl sm:text-3xl text-gray-900 mb-4">
-        Ready To Try A Smarter Approach?
-      </h2>
-      <p class="text-gray-600 mb-6 text-sm sm:text-base">
-        Join 37,000+ women who stopped settling for single-ingredient supplements.
-      </p>
-      <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn inline-block text-white font-bold text-lg sm:text-xl py-4 px-10 rounded-full uppercase tracking-wide">
-        Try Inflammation Pro Risk-Free
-      </a>
-      <p class="text-sm text-gray-500 mt-3">365-day money-back guarantee</p>
-
-      <div class="flex items-center justify-center gap-2 mt-4 text-xs text-gray-400">
-        <span class="inline-block w-3 h-3 bg-teal-600 rounded-full"></span>
-        <span>3rd Party Tested</span>
-        <span class="mx-1">|</span>
-        <span class="inline-block w-3 h-3 bg-teal-600 rounded-full"></span>
-        <span>GMP Certified</span>
-        <span class="mx-1">|</span>
-        <span class="inline-block w-3 h-3 bg-teal-600 rounded-full"></span>
-        <span>Made in USA</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== -->
-  <!-- FOOTER                   -->
-  <!-- ======================== -->
-  <footer class="py-8 px-4 bg-gray-900 text-gray-400 text-center text-xs">
-    <div class="max-w-4xl mx-auto">
-      <p class="mb-2">© 2026 Goodness Lover. All rights reserved.</p>
-      <p class="mb-4">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+  <!-- FOOTER -->
+  <footer style="padding:32px 16px;background:var(--slate);color:rgba(255,255,255,0.4);text-align:center;font-size:11px;">
+    <div class="container">
+      <p style="margin-bottom:8px;">© 2026 Goodness Lover. All rights reserved.</p>
+      <p style="margin-bottom:8px;">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
       <p>Individual results may vary.</p>
     </div>
   </footer>
 
-  <!-- ======================== -->
-  <!-- STICKY FOOTER CTA        -->
-  <!-- ======================== -->
-  <div id="sticky-footer" class="sticky-footer fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 py-3 px-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <!-- IMAGE NEEDED: Small Inflammation Pro product thumbnail, 40x40px -->
-        <div class="w-10 h-10 bg-warmgray-100 rounded flex items-center justify-center text-gray-400 text-xs flex-shrink-0">[Prod]</div>
-        <div class="hidden sm:block">
-          <p class="font-semibold text-sm text-gray-900">Inflammation Pro</p>
-          <p class="text-xs text-gray-500">3-Phase Inflammation Support</p>
+  <!-- STICKY FOOTER CTA -->
+  <div id="sticky-footer" class="sticky-footer">
+    <div class="sticky-footer-inner">
+      <div class="sticky-footer-info">
+        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=80&h=80&fit=crop&crop=center" alt="Inflammation Pro" class="sticky-footer-thumb">
+        <div>
+          <p class="sticky-footer-name">Inflammation Pro</p>
+          <p class="sticky-footer-price">3-Phase Inflammation Support</p>
         </div>
       </div>
-      <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn text-white font-bold text-sm py-2.5 px-6 rounded-full uppercase tracking-wide flex-shrink-0">
+      <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="cta-btn cta-btn-sm" style="font-size:13px;padding:10px 20px;">
         Order Now - $125.90
       </a>
     </div>
   </div>
 
-  <!-- ======================== -->
-  <!-- JAVASCRIPT                -->
-  <!-- ======================== -->
+  <!-- JAVASCRIPT -->
   <script>
-    // Countdown Timer - sets to end of current day + 2 days
+    // Countdown Timer
     (function() {
       function getTargetDate() {
-        const now = new Date();
-        const target = new Date(now);
+        var now = new Date();
+        var target = new Date(now);
         target.setDate(target.getDate() + 2);
         target.setHours(23, 59, 59, 999);
         return target;
       }
-
-      let targetDate = getTargetDate();
-
+      var targetDate = getTargetDate();
       function updateCountdown() {
-        const now = new Date();
-        let diff = targetDate - now;
-
+        var now = new Date();
+        var diff = targetDate - now;
         if (diff <= 0) {
           targetDate = getTargetDate();
           diff = targetDate - now;
         }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
-        document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('cd-min').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('cd-sec').textContent = String(seconds).padStart(2, '0');
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-display').textContent =
+          String(d).padStart(2,'0') + 'd : ' +
+          String(h).padStart(2,'0') + 'h : ' +
+          String(m).padStart(2,'0') + 'm : ' +
+          String(s).padStart(2,'0') + 's';
       }
-
       updateCountdown();
       setInterval(updateCountdown, 1000);
     })();
 
-    // Sticky Footer - IntersectionObserver
-    (function() {
-      const stickyFooter = document.getElementById('sticky-footer');
-      const ctaSection = document.getElementById('cta-section-1');
-
-      if (!stickyFooter || !ctaSection) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              stickyFooter.classList.remove('visible');
-            } else {
-              stickyFooter.classList.add('visible');
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-
-      observer.observe(ctaSection);
-    })();
+    // Pricing Selector
+    function selectPricing(el, type) {
+      document.querySelectorAll('.pricing-option').forEach(function(opt) {
+        opt.classList.remove('selected');
+      });
+      el.classList.add('selected');
+      var prices = { single: '$41.97', bundle: '$125.90', max: '$239.80' };
+      var btn = document.getElementById('main-cta');
+      if (btn) btn.textContent = 'TRY INFLAMMATION PRO RISK-FREE - ' + prices[type];
+      var stickyBtn = document.querySelector('.sticky-footer .cta-btn');
+      if (stickyBtn) stickyBtn.textContent = 'Order Now - ' + prices[type];
+    }
 
     // FAQ Accordion
-    (function() {
-      const faqItems = document.querySelectorAll('.faq-item');
+    function toggleFaq(el) {
+      var block = el.parentElement;
+      var isOpen = block.classList.contains('open');
+      document.querySelectorAll('.faq-block').forEach(function(b) {
+        b.classList.remove('open');
+      });
+      if (!isOpen) block.classList.add('open');
+    }
 
-      faqItems.forEach((item) => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-          const isOpen = item.classList.contains('open');
-          faqItems.forEach((other) => other.classList.remove('open'));
-          if (!isOpen) {
-            item.classList.add('open');
+    // Sticky Footer (IntersectionObserver)
+    (function() {
+      var footer = document.getElementById('sticky-footer');
+      var pricingSection = document.getElementById('pricing');
+      if (!footer || !pricingSection) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            footer.classList.remove('visible');
+          } else {
+            footer.classList.add('visible');
           }
         });
-      });
+      }, { threshold: 0.1 });
+      observer.observe(pricingSection);
     })();
 
     // Reveal on scroll
     (function() {
-      const reveals = document.querySelectorAll('.reveal');
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function(el) { observer.observe(el); });
+    })();
 
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-      );
-
-      reveals.forEach((el) => revealObserver.observe(el));
+    // Show nav tagline on desktop
+    (function() {
+      var tagline = document.querySelector('.nav-tagline');
+      if (tagline && window.innerWidth >= 640) tagline.style.display = 'block';
     })();
   </script>
 
