@@ -1,0 +1,4 @@
+:{$PORT} {
+	root * /srv/public
+	file_server browse
+}
