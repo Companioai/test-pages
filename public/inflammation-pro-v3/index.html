@@ -44,9 +44,8 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
 .section-full{max-width:100%;padding-left:0;padding-right:0}
 .section-title{font-size:28px;font-weight:800;text-align:center;margin-bottom:12px;line-height:1.3}
 .section-subtitle{font-size:16px;text-align:center;color:#666;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
-.fade-in{opacity:1;transform:translateY(0);transition:opacity 0.6s ease,transform 0.6s ease}
-.fade-in.pre-animate{opacity:0;transform:translateY(30px)}
-.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in{opacity:1;transform:none}
+.fade-in.visible{opacity:1;transform:none}
 
 /* Hero Section */
 .hero{padding:40px 20px 30px;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -101,6 +100,36 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
 .founder-card .pain-list li{padding:6px 0;padding-left:24px;position:relative;font-size:14px;color:#555}
 .founder-card .pain-list li::before{content:"✕";position:absolute;left:0;color:#e85d75;font-weight:700}
 .founder-card blockquote{font-size:15px;line-height:1.7;color:#444;font-style:italic;border-left:3px solid #0d9488;padding-left:16px;margin-top:16px}
+
+/* Pain List (Standalone) */
+.pain-list-standalone{max-width:600px;margin:0 auto 24px}
+.pain-list-standalone .pain-item{display:flex;align-items:center;gap:12px;padding:8px 0;font-size:1.1rem;color:#444}
+.pain-list-standalone .pain-icon{color:#ff699f;font-size:20px;font-weight:700;flex-shrink:0}
+
+/* Tried Everything Section */
+.tried-everything{background:#fff}
+.tried-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:700px;margin:0 auto 16px}
+.tried-item{display:flex;align-items:center;gap:8px;font-size:14px;color:#777;padding:8px 12px;background:#faf8f4;border-radius:8px}
+.tried-item .arrow{color:#ccc;font-size:12px;flex-shrink:0}
+.tried-nothing{text-align:center;font-size:16px;font-weight:700;color:#e85d75;margin-top:8px}
+
+/* Value Comparison VS Section */
+.value-comparison{background:#1a1a2e;color:#fff}
+.value-comparison .section-title{color:#fff}
+.value-comparison .section-subtitle{color:rgba(255,255,255,0.7)}
+.vs-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;max-width:800px;margin:0 auto;align-items:start}
+.vs-col{padding:24px}
+.vs-col h3{font-size:18px;font-weight:700;margin-bottom:16px;text-align:center}
+.vs-col.vs-bad h3{color:#e85d75}
+.vs-col.vs-good h3{color:#4ade80}
+.vs-col ul{list-style:none;padding:0}
+.vs-col ul li{padding:8px 0;font-size:14px;display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.vs-col.vs-bad ul li{color:rgba(255,255,255,0.6)}
+.vs-col.vs-good ul li{color:rgba(255,255,255,0.9)}
+.vs-badge{display:flex;align-items:center;justify-content:center;width:60px;flex-shrink:0}
+.vs-badge span{background:#ff699f;color:#fff;font-weight:800;font-size:18px;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.vs-check{color:#4ade80;font-weight:700;flex-shrink:0}
+.vs-x{color:#e85d75;font-weight:700;flex-shrink:0}
 
 /* Problem Section */
 .problem-section{background:#fff}
@@ -158,12 +187,32 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
 .progress-detail h4{font-size:15px;font-weight:700;margin-bottom:4px}
 .progress-detail p{font-size:13px;color:#666}
 
+/* Extended Expectations Timeline */
+.extended-timeline{display:flex;gap:0;max-width:900px;margin:0 auto;position:relative}
+.extended-timeline::before{content:"";position:absolute;top:30px;left:0;right:0;height:3px;background:linear-gradient(90deg,#0d9488,#0a7a70);z-index:0}
+.extended-phase{flex:1;text-align:center;position:relative;z-index:1;padding:0 8px}
+.extended-phase .phase-circle{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff}
+.extended-phase:nth-child(1) .phase-circle{background:#0d9488}
+.extended-phase:nth-child(2) .phase-circle{background:#0a7a70}
+.extended-phase:nth-child(3) .phase-circle{background:#115e59}
+.extended-phase:nth-child(4) .phase-circle{background:#1a1a2e}
+.extended-phase h4{font-size:15px;font-weight:700;margin-bottom:6px;color:#1a1a1a}
+.extended-phase p{font-size:13px;color:#666;line-height:1.5}
+
 /* How-To-Use Ritual */
 .ritual-steps{display:flex;flex-direction:column;gap:16px;max-width:500px;margin:0 auto}
 .ritual-step{display:flex;gap:16px;align-items:center;background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
 .ritual-step .step-num{width:40px;height:40px;border-radius:50%;background:#0d9488;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
 .ritual-step h4{font-size:15px;font-weight:700}
 .ritual-step p{font-size:13px;color:#666}
+
+/* We Make It Easy Section */
+.make-easy{text-align:center}
+.make-easy .easy-steps{display:flex;justify-content:center;gap:40px;max-width:800px;margin:0 auto;flex-wrap:wrap}
+.make-easy .easy-step{flex:1;min-width:200px;max-width:250px}
+.make-easy .easy-num{font-size:48px;font-weight:800;color:#0d9488;line-height:1;margin-bottom:8px}
+.make-easy .easy-step h4{font-size:16px;font-weight:700;margin-bottom:4px}
+.make-easy .easy-step p{font-size:14px;color:#666}
 
 /* Persona Cards */
 .persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px;margin:0 auto}
@@ -187,6 +236,13 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
 .nasties-item{background:rgba(255,255,255,0.08);border-radius:12px;padding:16px 20px;text-align:center;font-size:14px;font-weight:600;min-width:140px}
 .nasties-item .n-icon{font-size:24px;display:block;margin-bottom:4px;color:#e85d75}
 .nasties-item .plant-note{color:#0d9488;font-size:12px;margin-top:12px;font-style:italic}
+
+/* Who NOT For Section */
+.who-not{background:#fef3c7;border-radius:0}
+.who-not .section-title{color:#92400e}
+.who-not-list{max-width:600px;margin:0 auto}
+.who-not-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;font-size:15px;color:#78350f}
+.who-not-item .warn-icon{font-size:18px;flex-shrink:0;margin-top:2px}
 
 /* Reviews Section */
 .reviews-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:800px;margin:0 auto}
@@ -231,6 +287,8 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
 .faq-answer-inner{padding:0 0 18px;font-size:14px;color:#555;line-height:1.7}
 .faq-answer .citation{font-size:12px;color:#999;margin-top:8px}
+.faq-footnotes{max-width:700px;margin:24px auto 0;padding-top:16px;border-top:1px solid #e5e7eb}
+.faq-footnotes p{font-size:12px;color:#999;line-height:1.8}
 
 /* Guarantee */
 .guarantee-section{background:#f0fdf4;text-align:center}
@@ -289,6 +347,10 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
   .media-logos .logos-row{gap:10px}
   .media-logo{padding:8px 16px;font-size:13px}
   .ingredients-grid{grid-template-columns:1fr 1fr}
+  .vs-grid{grid-template-columns:1fr;gap:16px}
+  .vs-badge{order:-1}
+  .extended-timeline{flex-direction:column;gap:24px}
+  .extended-timeline::before{display:none}
 }
 </style>
 </head>
@@ -315,11 +377,11 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
   <a href="#pricing" class="btn-header">Get Inflammation Pro</a>
 </header>
 
-<!-- 3. Hero Section -->
+<!-- 3. Hero Section (UPDATED ... Addition #1) -->
 <section class="hero fade-in">
   <div class="hero-content">
-    <h1>Finally Address the <em>Root Cause</em> of Your Inflammation</h1>
-    <p>A clinically-informed formula that targets the gut-joint cycle ... so you can move freely, think clearly, and feel like yourself again.</p>
+    <h1>STOP SETTLING For Joint Pain, Gut Issues, and Constant Fatigue</h1>
+    <p>Discover the natural anti-inflammatory approach that helps your body heal itself ... without harsh medications or endless supplements.</p>
     <a href="#pricing" class="btn-primary">Try Inflammation Pro Risk-Free →</a>
     <div class="trust-badges">
       <div class="trust-badge"><span class="badge-icon">🛡️</span> 60-Day Guarantee</div>
@@ -394,7 +456,7 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
   </div>
 </div>
 
-<!-- 7. Founder Story -->
+<!-- 7. Founder Story (UPDATED ... Additions #2 & #3) -->
 <section class="founder-section fade-in">
   <h2 class="section-title">I Was Where You Are Right Now</h2>
   <p class="section-subtitle">A message from Sarah Otto, founder of Goodness Lover</p>
@@ -402,12 +464,31 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
     <div class="founder-avatar">SO</div>
     <div class="founder-stars">★★★★★</div>
     <h3>Sarah Otto</h3>
-    <ul class="pain-list">
-      <li>Waking up with hands so stiff I couldn't make a fist</li>
-      <li>Bloating after every single meal</li>
-      <li>3pm crashes that left me on the couch</li>
-      <li>Doctors saying "your labs look fine" when I felt terrible</li>
-    </ul>
+
+    <!-- Addition #2: Pain list with pink cross icons -->
+    <div class="pain-list-standalone">
+      <div class="pain-item"><span class="pain-icon">✕</span> Joint Pain & Stiffness</div>
+      <div class="pain-item"><span class="pain-icon">✕</span> Gut Inflammation & Bloating</div>
+      <div class="pain-item"><span class="pain-icon">✕</span> Brain Fog & Fatigue</div>
+      <div class="pain-item"><span class="pain-icon">✕</span> Poor Sleep Quality</div>
+    </div>
+
+    <!-- Addition #3: "I Tried Everything From" -->
+    <div style="margin:20px 0;padding:20px;background:#fff;border-radius:12px">
+      <h4 style="font-size:16px;font-weight:700;margin-bottom:12px;text-align:center">I Tried Everything From:</h4>
+      <div class="tried-grid">
+        <div class="tried-item"><span class="arrow">→</span> NSAIDs & Painkillers</div>
+        <div class="tried-item"><span class="arrow">→</span> Expensive Specialists</div>
+        <div class="tried-item"><span class="arrow">→</span> Elimination Diets</div>
+        <div class="tried-item"><span class="arrow">→</span> Turmeric Capsules</div>
+        <div class="tried-item"><span class="arrow">→</span> Anti-inflammatory Cookbooks</div>
+        <div class="tried-item"><span class="arrow">→</span> Probiotics</div>
+        <div class="tried-item"><span class="arrow">→</span> Ice/Heat Therapy</div>
+        <div class="tried-item"><span class="arrow">→</span> Cortisol Supplements</div>
+      </div>
+      <div class="tried-nothing">And nothing worked long-term.</div>
+    </div>
+
     <blockquote>
       "I spent three years and thousands of dollars trying every supplement on the shelf. Nothing worked because nothing addressed the actual connection between my gut and my joints. When I finally understood the gut-joint inflammation cycle, everything changed. That's why I created Inflammation Pro ... the formula I wish I'd had from day one."
     </blockquote>
@@ -619,38 +700,30 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
   </div>
 </section>
 
-<!-- 13. Progress Timeline -->
+<!-- 13. Extended Expectations Timeline (UPDATED ... Addition #5) -->
 <section class="fade-in" style="background:#fff">
   <h2 class="section-title">What to Expect Over Time</h2>
   <p class="section-subtitle">Real results from real people, week by week.</p>
-  <div class="progress-timeline">
-    <div class="progress-item">
-      <div class="progress-week">Week 1-2</div>
-      <div class="progress-detail">
-        <h4>Initial Relief</h4>
-        <p>Less morning stiffness, reduced bloating, subtle improvement in sleep quality.</p>
-      </div>
+  <div class="extended-timeline">
+    <div class="extended-phase">
+      <div class="phase-circle">1</div>
+      <h4>Week 1</h4>
+      <p>Likely lift in energy, mood, and joint comfort from consistent curcumin and zinc</p>
     </div>
-    <div class="progress-item">
-      <div class="progress-week">Week 3-4</div>
-      <div class="progress-detail">
-        <h4>Building Momentum</h4>
-        <p>Joint flexibility improves, energy stabilizes through the afternoon, digestive comfort becomes consistent.</p>
-      </div>
+    <div class="extended-phase">
+      <div class="phase-circle">2</div>
+      <h4>Month 1</h4>
+      <p>Noticeable reduction in stiffness and inflammation markers</p>
     </div>
-    <div class="progress-item">
-      <div class="progress-week">Week 6-8</div>
-      <div class="progress-detail">
-        <h4>Significant Improvement</h4>
-        <p>Noticeable reduction in joint pain, mental clarity returns, exercise recovery improves.</p>
-      </div>
+    <div class="extended-phase">
+      <div class="phase-circle">3</div>
+      <h4>Month 2</h4>
+      <p>Deeper gut healing ... probiotics establishing healthy microbiome</p>
     </div>
-    <div class="progress-item">
-      <div class="progress-week">Week 12+</div>
-      <div class="progress-detail">
-        <h4>Sustained Wellness</h4>
-        <p>Full benefits realized. Joints feel supported, gut stays calm, energy is consistent all day. This is your new baseline.</p>
-      </div>
+    <div class="extended-phase">
+      <div class="phase-circle">4</div>
+      <h4>Month 3</h4>
+      <p>Full 3-phase approach working ... calm, repair, and maintain in balance</p>
     </div>
   </div>
 </section>
@@ -687,6 +760,29 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
         <h4>Feel the Difference</h4>
         <p>Most people notice changes within 2-3 weeks</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Addition #7: "We Make It Easy" Section -->
+<section class="make-easy fade-in" style="background:#fff">
+  <h2 class="section-title">Taking Inflammation Pro Is Simple</h2>
+  <p class="section-subtitle">No complicated routines. No unpleasant rituals.</p>
+  <div class="easy-steps">
+    <div class="easy-step">
+      <div class="easy-num">1</div>
+      <h4>Take 2 capsules with breakfast</h4>
+      <p>That's it ... no powders, no mixing, no taste</p>
+    </div>
+    <div class="easy-step">
+      <div class="easy-num">2</div>
+      <h4>That's it</h4>
+      <p>No powders, no mixing, no taste</p>
+    </div>
+    <div class="easy-step">
+      <div class="easy-num">3</div>
+      <h4>60-day supply per bottle</h4>
+      <p>One bottle lasts two full months</p>
     </div>
   </div>
 </section>
@@ -771,6 +867,32 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
       <div class="nasties-item"><span class="n-icon">✕</span>No Proprietary Blends</div>
     </div>
     <p class="plant-note" style="text-align:center;margin-top:24px;color:#0d9488;font-size:14px">🌱 Even the capsule is plant-based (HPMC vegetarian)</p>
+  </div>
+</section>
+
+<!-- Addition #8: "Who Is Inflammation Pro NOT For" Section -->
+<section class="who-not section-full fade-in">
+  <div style="max-width:1100px;margin:0 auto;padding:0 20px">
+    <h2 class="section-title">Inflammation Pro Is NOT for You If:</h2>
+    <p class="section-subtitle" style="color:#92400e">We want to be upfront ... this isn't for everyone.</p>
+    <div class="who-not-list">
+      <div class="who-not-item">
+        <span class="warn-icon">⚠️</span>
+        <span>You're pregnant or nursing (consult your doctor)</span>
+      </div>
+      <div class="who-not-item">
+        <span class="warn-icon">⚠️</span>
+        <span>You're on blood thinners (willow bark interaction)</span>
+      </div>
+      <div class="who-not-item">
+        <span class="warn-icon">⚠️</span>
+        <span>You want a quick fix pill (this is a 3-phase approach)</span>
+      </div>
+      <div class="who-not-item">
+        <span class="warn-icon">⚠️</span>
+        <span>You're allergic to any ingredients (see full list in FAQ)</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -927,7 +1049,38 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
   </div>
 </section>
 
-<!-- 21. FAQ Accordion -->
+<!-- Addition #4: Value Comparison VS Section -->
+<section class="value-comparison section-full fade-in">
+  <div style="max-width:1100px;margin:0 auto;padding:60px 20px">
+    <h2 class="section-title">Why Inflammation Pro CRUSH Generic Turmeric</h2>
+    <p class="section-subtitle">Not all anti-inflammatory supplements are created equal.</p>
+    <div class="vs-grid">
+      <div class="vs-col vs-bad">
+        <h3>Generic Turmeric Supplements</h3>
+        <ul>
+          <li><span class="vs-x">✕</span> Low absorption (only 3% curcumin)</li>
+          <li><span class="vs-x">✕</span> Single-ingredient approach</li>
+          <li><span class="vs-x">✕</span> No gut support</li>
+          <li><span class="vs-x">✕</span> Artificial fillers</li>
+        </ul>
+      </div>
+      <div class="vs-badge">
+        <span>VS</span>
+      </div>
+      <div class="vs-col vs-good">
+        <h3>Inflammation Pro</h3>
+        <ul>
+          <li><span class="vs-check">✓</span> 200x more bioavailable (willow bark extract)</li>
+          <li><span class="vs-check">✓</span> 3-phase approach (calm, repair, maintain)</li>
+          <li><span class="vs-check">✓</span> Probiotic + zinc gut support</li>
+          <li><span class="vs-check">✓</span> Clean label, no fillers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 21. FAQ Accordion (UPDATED ... Addition #6) -->
 <section class="fade-in" style="background:#fff">
   <h2 class="section-title">Frequently Asked Questions</h2>
   <p class="section-subtitle">Everything you need to know.</p>
@@ -942,7 +1095,7 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">How long until I feel results? <span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">Most customers report initial changes within 2-3 weeks, with significant improvement by weeks 6-8. Some people notice reduced stiffness in as little as 5 days. Consistency is key ... we recommend a minimum of 60 days for best results. J. Int. Soc. Sports Nutr., 2014.</div></div>
+      <div class="faq-answer"><div class="faq-answer-inner">Most customers report initial changes within 2-3 weeks, with significant improvement by weeks 6-8. Some people notice reduced stiffness in as little as 5 days. Consistency is key ... we recommend a minimum of 60 days for best results.<sup>1</sup></div></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">How do I take it? <span class="faq-icon">+</span></button>
@@ -974,8 +1127,16 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">What makes this different from just taking turmeric? <span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">Standard turmeric has ~1% bioavailability ... most passes through you unabsorbed. Our CurcuWIN® form is clinically shown to have 46x better absorption. Plus, we combine it with boswellia, ginger, and omega-3s for a multi-pathway approach that turmeric alone can't match. J. Int. Soc. Sports Nutr., 2014.</div></div>
+      <div class="faq-answer"><div class="faq-answer-inner">Standard turmeric has ~1% bioavailability ... most passes through you unabsorbed. Our CurcuWIN® form is clinically shown to have 46x better absorption.<sup>2</sup> Plus, we combine it with boswellia, ginger, and omega-3s for a multi-pathway approach that turmeric alone can't match.<sup>3</sup></div></div>
     </div>
+  </div>
+  <!-- Addition #6: Research Citations Footnotes -->
+  <div class="faq-footnotes">
+    <p><sup>1</sup> J. Int. Soc. Sports Nutr., 2014 ... CurcuWIN bioavailability and absorption study</p>
+    <p><sup>2</sup> Phytother. Res., 2020 ... Gingerols and gut lining inflammation markers</p>
+    <p><sup>3</sup> Int. J. Med. Sci., 2020 ... Boswellia AKBA and inflammatory enzyme inhibition</p>
+    <p><sup>4</sup> J. Am. Coll. Nutr., 2019 ... Omega-3 DHA/EPA and inflammation resolution pathways</p>
+    <p><sup>5</sup> J. Ethnopharmacol., 2021 ... Willow bark extract and inflammatory marker reduction (63%)</p>
   </div>
 </section>
 
@@ -1098,25 +1259,9 @@ section{padding:60px 20px;max-width:1100px;margin:0 auto}
     }
   };
 
-  // Scroll animations (IntersectionObserver)
+  // Scroll animations (IntersectionObserver) ... DISABLED: all elements visible by default
   var faders = document.querySelectorAll('.fade-in');
-  if('IntersectionObserver' in window){
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },{threshold:0.15,rootMargin:'0px 0px -50px 0px'});
-    faders.forEach(function(f){observer.observe(f)});
-    // Fallback: if IntersectionObserver doesn't fire, make everything visible after 3s
-    setTimeout(function(){
-      faders.forEach(function(f){f.classList.add('visible')});
-    },3000);
-  } else {
-    faders.forEach(function(f){f.classList.add('visible')});
-  }
+  faders.forEach(function(f){f.classList.add('visible')});
 })();
 </script>
 </body>
