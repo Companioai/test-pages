@@ -711,6 +711,12 @@ button{cursor:pointer;font-family:inherit}
     });
   },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   reveals.forEach(function(el){observer.observe(el);});
+    // Fallback: ensure all reveals visible after 3 seconds (IntersectionObserver may not fire)
+    setTimeout(function(){
+      document.querySelectorAll('.reveal').forEach(function(el){
+        if(!el.classList.contains('visible')){el.classList.add('visible');}
+      });
+    },3000);
 
   // Mobile footer
   var footer=document.getElementById('mobile-footer');
