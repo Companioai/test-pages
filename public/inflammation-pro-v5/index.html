@@ -376,6 +376,13 @@
 .review-stat__number { font-size:42px; font-weight:800; color:#1a1a1a; line-height:1; }
 .review-stat__label { font-size:15px; color:#666; }
 
+
+/* CTA card enhancements */
+.pkg-qty { font-size:14px; font-weight:700; color:var(--ink); margin-bottom:2px; text-align:center; }
+.pkg-discount-line { font-size:13px; color:#16a34a; margin-bottom:10px; text-align:center; }
+.pkg-reassure { display:flex; flex-direction:column; gap:4px; margin-top:10px; font-size:12px; color:var(--ink-soft); text-align:center; }
+.pkg-reassure span { line-height:1.4; }
+
 </style>
 
 
@@ -823,9 +830,16 @@
           </div>
         </div>
         <div class="pkg-code">with code WELCOME30 — auto-applied &#10003;</div>
-        <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="btn btn-lg cta-btn">Start My 90-Day Protocol
+        <div class="pkg-qty">3 Bottles · 90-Day Supply</div>
+        <div class="pkg-discount-line">You save <strong>$111.95</strong> vs. buying monthly</div>
+        <a href="https://goodnesslover.com/pages/checkout-infpro-3b-subs" class="btn btn-lg cta-btn">Add to Cart — $125.90
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
+        <div class="pkg-reassure">
+          <span>📦 Delivered every 3 months</span>
+          <span>🛡️ 30-Day Money-Back Guarantee</span>
+          <span>💻 Online portal — cancel, skip, or pause anytime</span>
+        </div>
         <!-- CRO: Shipping urgency -->
         <div class="shipping-msg shipping__message--today" style="display:none"><strong>Ships today</strong> if ordered within <span class="remain-time"></span></div>
         <div class="shipping-msg shipping__message--tomorrow" style="display:none"><strong>Ships tomorrow</strong> if ordered within <span class="within-time"></span></div>
@@ -855,9 +869,16 @@
           <span class="per">just $1.70/day</span>
         </div>
         <div class="pkg-code" style="visibility:hidden">spacer</div>
-        <a href="https://goodnesslover.com/pages/checkout-infpro-1b-subs" class="btn btn-lg cta-btn">Start My Protocol
+        <div class="pkg-qty">1 Bottle · 30-Day Supply</div>
+        <div class="pkg-discount-line">First bottle: <strong>$50.96</strong> (15% off)</div>
+        <a href="https://goodnesslover.com/pages/checkout-infpro-1b-subs" class="btn btn-lg cta-btn">Add to Cart — $50.96
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
+        <div class="pkg-reassure">
+          <span>📦 Delivered every 30 days</span>
+          <span>🛡️ 30-Day Money-Back Guarantee</span>
+          <span>💻 Online portal — cancel, skip, or pause anytime</span>
+        </div>
         <!-- CRO: Shipping urgency -->
         <div class="shipping-msg shipping__message--today" style="display:none"><strong>Ships today</strong> if ordered within <span class="remain-time"></span></div>
         <div class="shipping-msg shipping__message--tomorrow" style="display:none"><strong>Ships tomorrow</strong> if ordered within <span class="within-time"></span></div>
