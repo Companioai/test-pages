@@ -1110,24 +1110,23 @@ var SALE_CONFIG = {
   }, 1000);
 })();
 
-/* 3. Mobile bottom sticky bar */
+/* 3. Mobile bottom sticky bar — only track hero CTA */
 (function(){
   var stickyBar = document.getElementById('stickyBottomBar');
   if (!stickyBar) return;
-  var ctaButtons = document.querySelectorAll('.cta-btn, .hero-cta, [href="#offer"]');
-  var debounceTimer = null;
+  var heroCta = document.querySelector('.hero-cta');
+  if (!heroCta) { stickyBar.classList.remove('hidden'); return; }
+  var shown = false;
   var observer = new IntersectionObserver(function(entries){
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(function(){
-      var anyVisible = entries.some(function(entry){ return entry.isIntersecting; });
-      if (anyVisible) {
-        stickyBar.classList.add('hidden');
-      } else {
-        stickyBar.classList.remove('hidden');
-      }
-    }, 150);
+    if (entries[0].isIntersecting) {
+      stickyBar.classList.add('hidden');
+      shown = false;
+    } else if (!shown) {
+      stickyBar.classList.remove('hidden');
+      shown = true;
+    }
   }, { threshold: 0.1 });
-  ctaButtons.forEach(function(btn){ observer.observe(btn); });
+  observer.observe(heroCta);
   stickyBar.classList.add('hidden');
 })();
 
