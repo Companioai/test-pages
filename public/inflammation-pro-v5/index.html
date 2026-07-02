@@ -1126,45 +1126,7 @@ var SALE_CONFIG = {
 })();
 
 /* 4. Count-up web component */
-var CountUp = /** @class */ (function(){
-  function CountUp(){}
-  CountUp.prototype.connectedCallback = function(el){
-    var target = parseInt(el.dataset.target) || 500;
-    var duration = parseInt(el.dataset.duration) || 4000;
-    var delay = parseInt(el.dataset.delay) || 300;
-    var finalText = el.dataset.finalText || '500+';
-    var hasAnimated = false;
-    var observer = new IntersectionObserver(function(entries){
-      if (entries[0].isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-        setTimeout(function(){ animateCount(el, target, duration, finalText); }, delay);
-        observer.disconnect();
-      }
-    }, { threshold: 0.5 });
-    observer.observe(el);
-  };
-  function animateCount(el, target, duration, finalText){
-    var start = performance.now();
-    function animate(now){
-      var elapsed = now - start;
-      var progress = Math.min(elapsed / duration, 1);
-      var eased = progress < 0.5
-        ? 4 * progress * progress * progress
-        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-      var current = Math.floor(eased * target);
-      el.textContent = current.toLocaleString();
-      if (progress < 1) requestAnimationFrame(animate);
-      else el.textContent = finalText;
-    }
-    requestAnimationFrame(animate);
-  }
-  return CountUp;
-})();
-
-document.querySelectorAll('count-up').forEach(function(el){
-  var cu = new CountUp();
-  cu.connectedCallback(el);
-});
+/* old CountUp web component removed */
 </script>
 
 <script>
@@ -1192,17 +1154,23 @@ document.querySelectorAll('count-up').forEach(function(el){
     requestAnimationFrame(step);
   }
 
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting && !entry.target.dataset.counted) {
-        entry.target.dataset.counted = 'true';
-        animateCountUp(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
+  function isInViewport(el) {
+    var r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  }
 
-  var target = document.querySelector('.countup-target');
-  if (target) observer.observe(target);
+  function onScroll() {
+    var target = document.querySelector('.countup-target');
+    if (target && !target.dataset.counted && isInViewport(target)) {
+      target.dataset.counted = 'true';
+      animateCountUp(target);
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+  // Also check on load in case already visible
+  setTimeout(onScroll, 500);
 })();
 </script>
 
