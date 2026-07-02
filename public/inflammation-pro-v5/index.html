@@ -1110,24 +1110,20 @@ var SALE_CONFIG = {
   }, 1000);
 })();
 
-/* 3. Mobile bottom sticky bar — only track hero CTA */
+/* 3. Mobile bottom sticky bar — show once past hero, never hide */
 (function(){
   var stickyBar = document.getElementById('stickyBottomBar');
   if (!stickyBar) return;
-  var heroCta = document.querySelector('.hero-cta');
-  if (!heroCta) { stickyBar.classList.remove('hidden'); return; }
-  var shown = false;
-  var observer = new IntersectionObserver(function(entries){
-    if (entries[0].isIntersecting) {
-      stickyBar.classList.add('hidden');
-      shown = false;
-    } else if (!shown) {
+  var hero = document.querySelector('.hero');
+  if (!hero) { stickyBar.classList.remove('hidden'); return; }
+  function check() {
+    if (hero.getBoundingClientRect().bottom < 0) {
       stickyBar.classList.remove('hidden');
-      shown = true;
+      window.removeEventListener('scroll', check);
     }
-  }, { threshold: 0.1 });
-  observer.observe(heroCta);
-  stickyBar.classList.add('hidden');
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  check();
 })();
 
 /* 4. Count-up web component */
