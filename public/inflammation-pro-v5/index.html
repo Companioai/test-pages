@@ -374,6 +374,12 @@
   /* 6. Purchase counter */
   .purchase-counter{text-align:center;font-size:15px;color:var(--ink);margin:24px auto 0;max-width:500px;padding:14px 20px;background:#FCF3E2;border-radius:10px;border:1px solid #F0D98A}
   .purchase-counter b{color:var(--coral-dark)}
+
+/* Review count-up stat (PQ style) */
+.review-stat { display:flex; align-items:baseline; justify-content:center; gap:8px; }
+.review-stat__number { font-size:42px; font-weight:800; color:#1a1a1a; line-height:1; }
+.review-stat__label { font-size:15px; color:#666; }
+
 </style>
 
 
@@ -711,7 +717,11 @@
   <div class="wrap center reveal">
     <div class="eyebrow">From the community trusted by millions</div>
     <h2>4.7 / 5</h2>
-    <p class="social-proof-stat" style="margin-top:8px;font-size:15px;color:#666;">Inflammation Pro just launched to the public — these results come from our first wave of subscribers. Goodness Lover has helped over <strong><span class="countup-target" data-target="2200000" data-prefix="" data-suffix="">0</span> million people</strong> health events since 2018.</p>
+    <div class="review-stat" style="margin:10px 0 6px;">
+      <span class="review-stat__number"><span class="countup-target" data-target="2200000">0</span>M+</span>
+      <span class="review-stat__label">since 2019</span>
+    </div>
+    <p class="social-proof-stat" style="margin-top:4px;font-size:14px;color:#888;">Goodness Lover has helped over 2.2 million people through health events since 2019.</p>
   </div>
   <div class="wrap">
     <div class="rev-grid">
@@ -1163,7 +1173,7 @@ document.querySelectorAll('count-up').forEach(function(el){
       // easeOutCubic
       var eased = 1 - Math.pow(1 - progress, 3);
       var current = (eased * targetMillions).toFixed(1);
-      el.textContent = current;
+      el.textContent = current + '';
       if (progress < 1) {
         requestAnimationFrame(step);
       } else {
