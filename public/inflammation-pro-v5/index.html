@@ -327,9 +327,11 @@
   .sale-timer__lbl{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.6);display:block;margin-top:2px}
   .sale-timer__unit{display:inline-flex;flex-direction:column;align-items:center}
   @media (max-width:760px){
-    .sale-timer{display:none}
+    .sale-timer{font-size:11px;gap:4px;padding:6px 8px}
     .sale-timer__box{min-width:30px;height:26px;font-size:14px}
     .sale-timer__lbl{font-size:8px}
+    header.site{display:none}
+    body{padding-top:0}
   }
 
   /* 2. Shipping urgency messages */
@@ -1113,13 +1115,17 @@ var SALE_CONFIG = {
   var stickyBar = document.getElementById('stickyBottomBar');
   if (!stickyBar) return;
   var ctaButtons = document.querySelectorAll('.cta-btn, .hero-cta, [href="#offer"]');
+  var debounceTimer = null;
   var observer = new IntersectionObserver(function(entries){
-    var anyVisible = entries.some(function(entry){ return entry.isIntersecting; });
-    if (anyVisible) {
-      stickyBar.classList.add('hidden');
-    } else {
-      stickyBar.classList.remove('hidden');
-    }
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function(){
+      var anyVisible = entries.some(function(entry){ return entry.isIntersecting; });
+      if (anyVisible) {
+        stickyBar.classList.add('hidden');
+      } else {
+        stickyBar.classList.remove('hidden');
+      }
+    }, 150);
   }, { threshold: 0.1 });
   ctaButtons.forEach(function(btn){ observer.observe(btn); });
   stickyBar.classList.add('hidden');
