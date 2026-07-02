@@ -315,12 +315,7 @@
   footer.site img{height:26px;margin:0 auto 16px;filter:brightness(0) invert(1);opacity:.92}
   footer.site .disc{max-width:760px;margin:0 auto;opacity:.8}
 
-  .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:70;background:#fff;box-shadow:0 -4px 20px rgba(60,30,20,.16);padding:10px 14px;display:none;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--blush-deep)}
-  .sticky-bar .sb-price{font-size:13px;line-height:1.2}
-  .sticky-bar .sb-price b{font-family:'Fraunces';font-size:18px;color:var(--ink);display:block}
-  .sticky-bar .sb-price s{color:var(--ink-soft)}
-  .sticky-bar .btn{padding:14px 22px;font-size:13px;min-height:52px;flex:0 0 auto}
-  @media (max-width:760px){.sticky-bar{display:flex}body{padding-bottom:76px}}
+  /* sticky-bar removed — using sticky-bottom-bar */
 
   /* ===== CRO v5 additions ===== */
 
@@ -351,6 +346,7 @@
   .sticky-bottom-bar__offer{display:block;font-size:15px;margin-top:2px}
   .sticky-bottom-bar__cta{background:#EE7E47;color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;letter-spacing:.03em}
   @media (min-width:768px){.sticky-bottom-bar{display:none}}
+  @media (max-width:767px){body{padding-bottom:70px}}
 
   /* 4. Count-up social proof */
   .social-proof-countup{text-align:center;padding:20px 20px 0;font-size:16px;font-weight:600;color:var(--ink)}
@@ -998,16 +994,13 @@
   <div class="sticky-bottom-bar__content">
     <div class="sticky-bottom-bar__text">
       <span class="sticky-bottom-bar__sale">🇺🇸 4TH OF JULY SALE</span>
-      <span class="sticky-bottom-bar__offer">30% Off Your First Protocol</span>
+      <span class="sticky-bottom-bar__offer">30% Off + Free Naturopath Access</span>
     </div>
-    <a href="#offer" class="sticky-bottom-bar__cta">Claim Discount</a>
+    <a href="#offer" class="sticky-bottom-bar__cta">Claim Offer</a>
   </div>
 </div>
 
-<div class="sticky-bar">
-  <div class="sb-price"><s>$179.85</s><b>$125.90</b></div>
-  <a href="#offer" class="btn">Start My Protocol</a>
-</div>
+<!-- sticky-bar with price removed — using sticky-bottom-bar instead -->
 
 <script>
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
